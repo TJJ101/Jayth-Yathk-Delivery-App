@@ -5,3 +5,13 @@ Screen1 As screen:
         Width: =640
         ZIndex: =1
 
+    Button1 As button:
+        Height: =70
+        OnSelect: =Navigate(Screen2)
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =202
+        Y: =560
+        ZIndex: =2
+

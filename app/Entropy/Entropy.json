@@ -3,6 +3,7 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
+    "Button1": 8,
     "Rectangle1": 4,
     "Rectangle1_1": 7,
     "Screen1": 3,
@@ -10,7 +11,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/09/2023 12:40:49",
+  "HeaderLastSavedDateTimeUTC": "01/09/2023 12:42:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -23,10 +24,12 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "rectangle": 0
+    "button": 0,
+    "rectangle": 1
   },
   "OverridablePropertiesEntry": {
     "App": {},
+    "Button1": {},
     "Rectangle1": {},
     "Rectangle1_1": {},
     "Screen1": {},
@@ -35,6 +38,7 @@
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PublishOrderIndices": {
     "App": 0,
+    "Button1": 0,
     "Rectangle1": 3,
     "Rectangle1_1": 3,
     "Screen1": 2,
