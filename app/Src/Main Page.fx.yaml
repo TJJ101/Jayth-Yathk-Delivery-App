@@ -1,12 +1,2 @@
 "'Main Page' As screen":
 
-    Button1 As button:
-        Height: =70
-        OnSelect: =Navigate(Screen2,ScreenTransition.Fade)
-        Size: =24
-        Text: ="Navigate"
-        Width: =280
-        X: =180
-        Y: =1022
-        ZIndex: =2
-
