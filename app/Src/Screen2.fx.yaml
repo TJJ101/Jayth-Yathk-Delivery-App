@@ -1,0 +1,8 @@
+Screen2 As screen:
+
+    Rectangle1_1 As rectangle:
+        Height: =169
+        Width: =640
+        Y: =366
+        ZIndex: =1
+
