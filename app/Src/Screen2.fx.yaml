@@ -6,3 +6,12 @@ Screen2 As screen:
         Y: =366
         ZIndex: =1
 
+    Label1 As label:
+        Height: =70
+        Size: =21
+        Text: =test
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =2
+
