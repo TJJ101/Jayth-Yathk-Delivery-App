@@ -2,12 +2,14 @@ Screen1 As screen:
 
     Rectangle1 As rectangle:
         Height: =169
+        OnSelect: |-
+            =Navigate( Screen2, ScreenTransition.Fade, { ID: "NOOB" } )
         Width: =640
         ZIndex: =1
 
     Button1 As button:
         Height: =70
-        OnSelect: =Navigate(Screen2)
+        OnSelect: =Navigate(Screen2, , testttt)
         Size: =24
         Text: ="Button"
         Width: =280
