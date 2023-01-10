@@ -16,11 +16,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/10/2023 06:29:19",
+  "HeaderLastSavedDateTimeUTC": "01/10/2023 13:35:48",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/5bd20181cb9444fd9d58bbfedd36473c\"",
-    "55d42856-414d-4aa3-9326-bf396952ea9b": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/e3a5bf18033747769b9d5df9d4c95c5b\""
+    "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/4e4451aa5a0c4dad92ffbbcb968136f6\"",
+    "55d42856-414d-4aa3-9326-bf396952ea9b": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/23bf3c308b57473f814f7be6ff152ab3\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -73,15 +73,15 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1150601,
+    "AnalysisLoadTime": 0.130823,
     "ControlCount": {
       "button": 2,
-      "label": 3,
+      "label": 2,
       "rectangle": 1,
       "screen": 3,
       "text": 2
     },
-    "DeserializationLoadTime": 0.5669379,
+    "DeserializationLoadTime": 2.1732749,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
