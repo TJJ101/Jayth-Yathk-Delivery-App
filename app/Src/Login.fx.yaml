@@ -1,0 +1,60 @@
+Login As screen:
+
+    Label2 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Test Login Page"
+        Width: =560
+        X: =39
+        Y: =72
+        ZIndex: =1
+
+    UNameEmailInput As text:
+        Default: =
+        Font: =Font.Georgia
+        Height: =70
+        HintText: ="Username/Email"
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =354
+        ZIndex: =2
+
+    PasswordInput As text:
+        Default: =
+        Font: =Font.Georgia
+        Height: =70
+        HintText: ="Password"
+        Mode: =TextMode.Password
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =524
+        ZIndex: =3
+
+    LoginBtn As button:
+        Font: =Font.Georgia
+        Height: =70
+        OnSelect: =If((UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password, Navigate(Home));
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="Login"
+        Width: =280
+        X: =179
+        Y: =693
+        ZIndex: =4
+
