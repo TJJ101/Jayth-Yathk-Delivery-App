@@ -47,9 +47,13 @@ Login As screen:
         Font: =Font.Georgia
         Height: =70
         OnSelect: |-
-            =If((UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password, Set(TestValue, "Success"); Navigate(Home), Set(TestValue, "Fail"));
+            =If(
+                (UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password,
+                Navigate(Home)
+            );
             Reset(UNameEmailInput);
             Reset(PasswordInput);
+            //this doesnt check same line so i need adjust
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
         RadiusTopLeft: =20
