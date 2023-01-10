@@ -7,7 +7,6 @@
     "Home": 3,
     "Label1": 6,
     "Label2": 9,
-    "Label3": 13,
     "Login": 8,
     "LoginBtn": 12,
     "PasswordInput": 11,
@@ -17,11 +16,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/10/2023 05:53:00",
+  "HeaderLastSavedDateTimeUTC": "01/10/2023 06:01:40",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "5137a919-5945-4b85-961f-d8379c4e43e1": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/9814968f85d54558b72ea46a3fa17ae8\"",
-    "8b2ed73c-843f-4749-be92-359350372397": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/aa99b38f2d344fe2bf757dcc9f4caf94\""
+    "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/5bd20181cb9444fd9d58bbfedd36473c\"",
+    "55d42856-414d-4aa3-9326-bf396952ea9b": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/e3a5bf18033747769b9d5df9d4c95c5b\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -29,7 +28,8 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "accounts": 0
+    "accounts": 0,
+    "CustomGallerySample": 1
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -46,7 +46,6 @@
     "Home": {},
     "Label1": {},
     "Label2": {},
-    "Label3": {},
     "Login": {},
     "LoginBtn": {},
     "PasswordInput": {},
@@ -57,19 +56,20 @@
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 5,
+    "Button1": 4,
     "Home": 2,
-    "Label1": 6,
+    "Label1": 5,
     "Label2": 0,
-    "Label3": 4,
     "Login": 0,
     "LoginBtn": 3,
     "PasswordInput": 2,
-    "Rectangle1_1": 7,
+    "Rectangle1_1": 6,
     "Screen2": 4,
     "UNameEmailInput": 1
   },
-  "ResourcesJsonIndices": {},
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {

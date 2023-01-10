@@ -47,7 +47,7 @@ Login As screen:
         Font: =Font.Georgia
         Height: =70
         OnSelect: |-
-            =If(LookUp(accounts, Username = UNameEmailInput.Text, true), Set(TestValue, "Success"); Navigate(Home), Set(TestValue, "Fail"));
+            =If((UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password, Set(TestValue, "Success"); Navigate(Home), Set(TestValue, "Fail"));
             Reset(UNameEmailInput);
             Reset(PasswordInput);
         RadiusBottomLeft: =20
@@ -60,13 +60,4 @@ Login As screen:
         X: =179
         Y: =693
         ZIndex: =4
-
-    Label3 As label:
-        Height: =70
-        Size: =21
-        Text: =If("testUser" in accounts.Username, "testUser is in Table", "Can't find value")
-        Width: =560
-        X: =39
-        Y: =896
-        ZIndex: =5
 
