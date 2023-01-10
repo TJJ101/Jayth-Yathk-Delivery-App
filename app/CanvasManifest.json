@@ -114,6 +114,7 @@
   },
   "ScreenOrder": [
     "Login",
+    "Sign Up",
     "Home",
     "Screen2"
   ]

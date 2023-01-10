@@ -7,16 +7,21 @@
     "Home": 3,
     "Label1": 6,
     "Label2": 9,
+    "Label2_1": 14,
+    "log_in_btn": 12,
     "Login": 8,
-    "LoginBtn": 12,
     "PasswordInput": 11,
+    "PasswordInput_1": 16,
     "Rectangle1_1": 7,
     "Screen2": 5,
-    "UNameEmailInput": 10
+    "Sign Up": 13,
+    "sign_up_btn": 17,
+    "UNameEmailInput": 10,
+    "UNameEmailInput_1": 15
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/10/2023 13:35:48",
+  "HeaderLastSavedDateTimeUTC": "01/10/2023 15:36:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/4e4451aa5a0c4dad92ffbbcb968136f6\"",
@@ -46,26 +51,36 @@
     "Home": {},
     "Label1": {},
     "Label2": {},
+    "Label2_1": {},
+    "log_in_btn": {},
     "Login": {},
-    "LoginBtn": {},
     "PasswordInput": {},
+    "PasswordInput_1": {},
     "Rectangle1_1": {},
     "Screen2": {},
-    "UNameEmailInput": {}
+    "Sign Up": {},
+    "sign_up_btn": {},
+    "UNameEmailInput": {},
+    "UNameEmailInput_1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 4,
+    "Button1": 8,
     "Home": 2,
-    "Label1": 5,
+    "Label1": 9,
     "Label2": 0,
+    "Label2_1": 4,
+    "log_in_btn": 3,
     "Login": 0,
-    "LoginBtn": 3,
     "PasswordInput": 2,
-    "Rectangle1_1": 6,
+    "PasswordInput_1": 6,
+    "Rectangle1_1": 10,
     "Screen2": 4,
-    "UNameEmailInput": 1
+    "Sign Up": 0,
+    "sign_up_btn": 7,
+    "UNameEmailInput": 1,
+    "UNameEmailInput_1": 5
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
@@ -75,11 +90,11 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 0.130823,
     "ControlCount": {
-      "button": 2,
-      "label": 2,
+      "button": 3,
+      "label": 3,
       "rectangle": 1,
-      "screen": 3,
-      "text": 2
+      "screen": 4,
+      "text": 4
     },
     "DeserializationLoadTime": 2.1732749,
     "ErrorCount": 0

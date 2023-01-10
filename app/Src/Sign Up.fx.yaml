@@ -1,18 +1,18 @@
-Login As screen:
+"'Sign Up' As screen":
 
-    Label2 As label:
+    Label2_1 As label:
         Align: =Align.Center
         Font: =Font.Georgia
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =21
-        Text: ="Login"
+        Text: ="Sign Up"
         Width: =560
         X: =39
         Y: =72
         ZIndex: =1
 
-    UNameEmailInput As text:
+    UNameEmailInput_1 As text:
         Default: =
         Font: =Font.Georgia
         Height: =70
@@ -27,7 +27,7 @@ Login As screen:
         Y: =354
         ZIndex: =2
 
-    PasswordInput As text:
+    PasswordInput_1 As text:
         Default: =
         Font: =Font.Georgia
         Height: =70
@@ -43,16 +43,16 @@ Login As screen:
         Y: =524
         ZIndex: =3
 
-    log_in_btn As button:
+    sign_up_btn As button:
         Font: =Font.Georgia
         Height: =70
         OnSelect: |-
             =If(
-                (UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password,
+                (UNameEmailInput_1.Text in accounts.Username || UNameEmailInput_1.Text in accounts.Email) && PasswordInput_1.Text in accounts.Password,
                 Navigate(Home)
             );
-            Reset(UNameEmailInput);
-            Reset(PasswordInput);
+            Reset(UNameEmailInput_1);
+            Reset(PasswordInput_1);
             //this doesnt check same line so i need adjust
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
