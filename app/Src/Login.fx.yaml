@@ -48,7 +48,7 @@ Login As screen:
         Height: =70
         OnSelect: |-
             =If(
-                (UNameEmailInput.Text in accounts.Username || UNameEmailInput.Text in accounts.Email) && PasswordInput.Text in accounts.Password,
+                (UNameEmailInput.Text in customer.Username || UNameEmailInput.Text in customer.Email) && PasswordInput.Text in customer.Password,
                 Navigate(Home)
             );
             Reset(UNameEmailInput);
