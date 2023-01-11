@@ -49,7 +49,14 @@ Login As screen:
         OnSelect: |-
             =If(
                 (UNameEmailInput.Text in customer.Username || UNameEmailInput.Text in customer.Email) && PasswordInput.Text in customer.Password,
-                Navigate(CHome)
+                Navigate(CHome);
+                Notify(
+                    "Welcome back " & LookUp(
+                        customer,
+                        Password = PasswordInput.Text,
+                        Username
+                    ), Success, 1500
+                )
             );
             Reset(UNameEmailInput);
             Reset(PasswordInput);
