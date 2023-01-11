@@ -48,7 +48,7 @@
         Height: =70
         OnSelect: |-
             =If(
-                (UNameEmailInput_1.Text in accounts.Username || UNameEmailInput_1.Text in accounts.Email) && PasswordInput_1.Text in accounts.Password,
+                (UNameEmailInput_1.Text in customer.Username || UNameEmailInput_1.Text in customer.Email) && PasswordInput_1.Text in customer.Password,
                 Navigate(Home)
             );
             Reset(UNameEmailInput_1);

@@ -1,5 +1,32 @@
 {
-  "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": {
+  "30907c22-7f48-49da-a3b9-27539d9f4aba": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1599/1.0.1599.3017/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel"
+    },
+    "datasets": {
+      "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6": {
+        "dataSources": {
+          "customer": {
+            "tableName": "customer"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "customer"
+    ],
+    "dependencies": {
+      "fileSource": "587b6246-f6b3-445f-934c-838536ba1d49"
+    },
+    "dependents": [],
+    "id": "30907c22-7f48-49da-a3b9-27539d9f4aba"
+  },
+  "587b6246-f6b3-445f-934c-838536ba1d49": {
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -12,35 +39,8 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "55d42856-414d-4aa3-9326-bf396952ea9b"
+      "30907c22-7f48-49da-a3b9-27539d9f4aba"
     ],
-    "id": "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef"
-  },
-  "55d42856-414d-4aa3-9326-bf396952ea9b": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "displayName": "Excel",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1599/1.0.1599.3017/excel/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excel"
-    },
-    "datasets": {
-      "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6": {
-        "dataSources": {
-          "accounts": {
-            "tableName": "accounts"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "accounts"
-    ],
-    "dependencies": {
-      "fileSource": "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef"
-    },
-    "dependents": [],
-    "id": "55d42856-414d-4aa3-9326-bf396952ea9b"
+    "id": "587b6246-f6b3-445f-934c-838536ba1d49"
   }
 }

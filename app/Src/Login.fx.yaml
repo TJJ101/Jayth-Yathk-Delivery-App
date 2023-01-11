@@ -65,3 +65,14 @@ Login As screen:
         Y: =693
         ZIndex: =4
 
+    Label3 As label:
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        OnSelect: =Navigate('Sign Up',ScreenTransition.Fade)
+        Text: ="Don't have an account? Click here to Sign Up"
+        Width: =369
+        X: =134
+        Y: =816
+        ZIndex: =5
+

@@ -3,29 +3,30 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 4,
-    "Home": 3,
-    "Label1": 6,
-    "Label2": 9,
-    "Label2_1": 14,
-    "log_in_btn": 12,
-    "Login": 8,
-    "PasswordInput": 11,
-    "PasswordInput_1": 16,
-    "Rectangle1_1": 7,
-    "Screen2": 5,
-    "Sign Up": 13,
-    "sign_up_btn": 17,
-    "UNameEmailInput": 10,
-    "UNameEmailInput_1": 15
+    "Button1": 9,
+    "Home": 8,
+    "Label1": 11,
+    "Label2": 14,
+    "Label2_1": 4,
+    "Label3": 18,
+    "log_in_btn": 17,
+    "Login": 13,
+    "PasswordInput": 16,
+    "PasswordInput_1": 6,
+    "Rectangle1_1": 12,
+    "Screen2": 10,
+    "Sign Up": 3,
+    "sign_up_btn": 7,
+    "UNameEmailInput": 15,
+    "UNameEmailInput_1": 5
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/10/2023 15:41:58",
+  "HeaderLastSavedDateTimeUTC": "01/11/2023 07:32:08",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "3fd9bcc1-1d5f-4f75-b66c-b0b7c833d7ef": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/4e4451aa5a0c4dad92ffbbcb968136f6\"",
-    "55d42856-414d-4aa3-9326-bf396952ea9b": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/23bf3c308b57473f814f7be6ff152ab3\""
+    "30907c22-7f48-49da-a3b9-27539d9f4aba": "\"/providers/microsoft.powerapps/apis/shared_excel/connections/98edc0ac9def4678b15f997ca25db0c7\"",
+    "587b6246-f6b3-445f-934c-838536ba1d49": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/8a29972a615e4f60b21514317f202319\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -33,17 +34,17 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "accounts": 0,
-    "CustomGallerySample": 1
+    "customer": 1,
+    "CustomGallerySample": 0
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "button": 0,
-    "label": 1,
-    "rectangle": 2,
-    "text": 3
+    "button": 2,
+    "label": 0,
+    "rectangle": 3,
+    "text": 1
   },
   "OverridablePropertiesEntry": {
     "App": {},
@@ -52,6 +53,7 @@
     "Label1": {},
     "Label2": {},
     "Label2_1": {},
+    "Label3": {},
     "log_in_btn": {},
     "Login": {},
     "PasswordInput": {},
@@ -66,21 +68,22 @@
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 8,
+    "Button1": 9,
     "Home": 2,
-    "Label1": 9,
+    "Label1": 10,
     "Label2": 0,
-    "Label2_1": 4,
+    "Label2_1": 5,
+    "Label3": 4,
     "log_in_btn": 3,
     "Login": 0,
     "PasswordInput": 2,
-    "PasswordInput_1": 6,
-    "Rectangle1_1": 10,
+    "PasswordInput_1": 7,
+    "Rectangle1_1": 11,
     "Screen2": 4,
     "Sign Up": 0,
-    "sign_up_btn": 7,
+    "sign_up_btn": 8,
     "UNameEmailInput": 1,
-    "UNameEmailInput_1": 5
+    "UNameEmailInput_1": 6
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
@@ -88,7 +91,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.130823,
+    "AnalysisLoadTime": 0.1795385,
     "ControlCount": {
       "button": 3,
       "label": 3,
@@ -96,8 +99,8 @@
       "screen": 4,
       "text": 4
     },
-    "DeserializationLoadTime": 2.1732749,
-    "ErrorCount": 6
+    "DeserializationLoadTime": 0.7465032,
+    "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
