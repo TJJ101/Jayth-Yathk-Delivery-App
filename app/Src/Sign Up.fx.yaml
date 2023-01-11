@@ -49,7 +49,7 @@
         OnSelect: |-
             =If(
                 (UNameEmailInput_1.Text in customer.Username || UNameEmailInput_1.Text in customer.Email) && PasswordInput_1.Text in customer.Password,
-                Navigate(Home)
+                Navigate(CHome)
             );
             Reset(UNameEmailInput_1);
             Reset(PasswordInput_1);

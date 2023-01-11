@@ -49,7 +49,7 @@ Login As screen:
         OnSelect: |-
             =If(
                 (UNameEmailInput.Text in customer.Username || UNameEmailInput.Text in customer.Email) && PasswordInput.Text in customer.Password,
-                Navigate(Home)
+                Navigate(CHome)
             );
             Reset(UNameEmailInput);
             Reset(PasswordInput);
@@ -73,6 +73,6 @@ Login As screen:
         Text: ="Don't have an account? Click here to Sign Up"
         Width: =369
         X: =134
-        Y: =816
+        Y: =804
         ZIndex: =5
 

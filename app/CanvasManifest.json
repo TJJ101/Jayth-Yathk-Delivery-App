@@ -115,7 +115,7 @@
   "ScreenOrder": [
     "Login",
     "Sign Up",
-    "Home",
-    "Screen2"
+    "CHome",
+    "DHome"
   ]
 }
