@@ -3,26 +3,26 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 9,
-    "Home": 8,
-    "Label1": 11,
-    "Label2": 14,
-    "Label2_1": 4,
-    "Label3": 18,
-    "log_in_btn": 17,
-    "Login": 13,
-    "PasswordInput": 16,
-    "PasswordInput_1": 6,
-    "Rectangle1_1": 12,
-    "Screen2": 10,
-    "Sign Up": 3,
-    "sign_up_btn": 7,
-    "UNameEmailInput": 15,
-    "UNameEmailInput_1": 5
+    "Button1": 18,
+    "Home": 17,
+    "Label1": 4,
+    "Label2": 7,
+    "Label2_1": 13,
+    "Label3": 11,
+    "log_in_btn": 10,
+    "Login": 6,
+    "PasswordInput": 9,
+    "PasswordInput_1": 15,
+    "Rectangle1_1": 5,
+    "Screen2": 3,
+    "Sign Up": 12,
+    "sign_up_btn": 16,
+    "UNameEmailInput": 8,
+    "UNameEmailInput_1": 14
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/11/2023 07:38:49",
+  "HeaderLastSavedDateTimeUTC": "01/11/2023 11:39:39",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1a3ad4d4-a966-4ef3-9557-bb33f76d0531": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/299b76c638a7468cb61afb1211e7c6f7\"",
@@ -50,10 +50,10 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "button": 2,
+    "button": 3,
     "label": 0,
-    "rectangle": 3,
-    "text": 1
+    "rectangle": 1,
+    "text": 2
   },
   "OverridablePropertiesEntry": {
     "App": {},
@@ -100,15 +100,15 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1795385,
+    "AnalysisLoadTime": 0.1935974,
     "ControlCount": {
       "button": 3,
-      "label": 3,
+      "label": 4,
       "rectangle": 1,
       "screen": 4,
       "text": 4
     },
-    "DeserializationLoadTime": 0.7465032,
+    "DeserializationLoadTime": 2.7188911,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true
