@@ -337,14 +337,7 @@
         "FontWeight",
         "Align",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
         "Height",
         "DisplayMode",
@@ -406,7 +399,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PasswordInput_1",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -775,7 +768,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "sign_up_btn",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
