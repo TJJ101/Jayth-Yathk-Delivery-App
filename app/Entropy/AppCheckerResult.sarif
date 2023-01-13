@@ -14,6 +14,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CHome.SearchBar1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CHome.SearchBar1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CHome",
+                "type": "CHome.SearchBar1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Login.UNameEmailInput.AccessibleLabel"
                 }
               ],
@@ -134,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Sign Up'.UNameEmailInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Username_DataCard1.DataCardValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Sign Up'.UNameEmailInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Username_DataCard1.DataCardValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Sign Up",
-                "type": "'Sign Up'.UNameEmailInput_1"
+                "type": "'Sign Up'.SignUpForm.Username_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -164,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Sign Up'.PasswordInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.MobileNo_DataCard1.DataCardValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Sign Up'.PasswordInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.MobileNo_DataCard1.DataCardValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Sign Up",
-                "type": "'Sign Up'.PasswordInput_1"
+                "type": "'Sign Up'.SignUpForm.MobileNo_DataCard1.DataCardValue2"
               }
             }
           ],
@@ -194,19 +224,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CHome.SearchBar1.AccessibleLabel"
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Email_DataCard1.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CHome.SearchBar1.AccessibleLabel",
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Email_DataCard1.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "CHome",
-                "type": "CHome.SearchBar1"
+                "module": "Sign Up",
+                "type": "'Sign Up'.SignUpForm.Email_DataCard1.DataCardValue3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Password_DataCard1.DataCardValue4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Sign Up'.SignUpForm.Password_DataCard1.DataCardValue4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Sign Up",
+                "type": "'Sign Up'.SignUpForm.Password_DataCard1.DataCardValue4"
               }
             }
           ],

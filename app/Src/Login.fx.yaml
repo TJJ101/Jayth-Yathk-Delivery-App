@@ -1,5 +1,12 @@
 Login As screen:
 
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(171, 198, 174, 1)
+        Fill: =RGBA(171, 198, 174, 1)
+        Height: =180
+        Width: =640
+        ZIndex: =1
+
     Label2 As label:
         Align: =Align.Center
         Font: =Font.Georgia
@@ -10,7 +17,7 @@ Login As screen:
         Width: =560
         X: =39
         Y: =72
-        ZIndex: =1
+        ZIndex: =2
 
     UNameEmailInput As text:
         Default: =
@@ -25,7 +32,7 @@ Login As screen:
         Width: =560
         X: =39
         Y: =354
-        ZIndex: =2
+        ZIndex: =3
 
     PasswordInput As text:
         Default: =
@@ -41,9 +48,10 @@ Login As screen:
         Width: =560
         X: =39
         Y: =524
-        ZIndex: =3
+        ZIndex: =4
 
     log_in_btn As button:
+        Fill: =RGBA(171, 198, 174, 1)
         Font: =Font.Georgia
         Height: =70
         OnSelect: |-
@@ -70,7 +78,7 @@ Login As screen:
         Width: =280
         X: =179
         Y: =693
-        ZIndex: =4
+        ZIndex: =5
 
     Label3 As label:
         Font: =Font.Georgia
@@ -81,5 +89,5 @@ Login As screen:
         Width: =369
         X: =134
         Y: =804
-        ZIndex: =5
+        ZIndex: =6
 
