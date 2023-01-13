@@ -21,6 +21,7 @@
         ZIndex: =2
 
     sign_up_btn As button:
+        Fill: =RGBA(171, 198, 174, 1)
         Font: =Font.Georgia
         Height: =70
         OnSelect: =SubmitForm(SignUpForm);
