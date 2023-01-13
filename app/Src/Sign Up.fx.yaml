@@ -16,7 +16,7 @@
         Default: =
         Font: =Font.Georgia
         Height: =70
-        HintText: ="Username/Email"
+        HintText: ="Username"
         RadiusBottomLeft: =25
         RadiusBottomRight: =25
         RadiusTopLeft: =25
@@ -24,7 +24,7 @@
         Size: =21
         Width: =560
         X: =39
-        Y: =354
+        Y: =199
         ZIndex: =2
 
     PasswordInput_1 As text:
@@ -40,7 +40,7 @@
         Size: =21
         Width: =560
         X: =39
-        Y: =524
+        Y: =715
         ZIndex: =3
 
     sign_up_btn As button:
@@ -59,9 +59,39 @@
         RadiusTopLeft: =20
         RadiusTopRight: =20
         Size: =24
-        Text: ="Login"
+        Text: ="Register"
         Width: =280
         X: =179
-        Y: =693
+        Y: =931
         ZIndex: =4
+
+    UNameEmailInput_2 As text:
+        Default: =
+        Font: =Font.Georgia
+        Height: =70
+        HintText: ="Mobile No"
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =371
+        ZIndex: =5
+
+    UNameEmailInput_3 As text:
+        Default: =
+        Font: =Font.Georgia
+        Height: =70
+        HintText: ="Email"
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Size: =21
+        Width: =560
+        X: =39
+        Y: =543
+        ZIndex: =6
 
