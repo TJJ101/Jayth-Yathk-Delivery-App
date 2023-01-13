@@ -2,7 +2,7 @@ DHome As screen:
 
     Rectangle2_1 As rectangle:
         BorderColor: =RGBA(152, 208, 70, 1)
-        Fill: =RGBA(54, 176, 75, 1)
+        Fill: =RGBA(171, 198, 174, 1)
         Height: =126
         Width: =640
         ZIndex: =1
@@ -35,7 +35,7 @@ DHome As screen:
 
     QrScanner1_1 As barcodeScanner:
         BarcodeType: =BarcodeType.QRCode
-        Fill: =RGBA(54, 176, 75, 1)
+        Fill: =RGBA(171, 198, 174, 1)
         Height: =53
         OnScan: =Set(ScannedValue, QrScanner1_1.Value)
         RadiusBottomLeft: =15
