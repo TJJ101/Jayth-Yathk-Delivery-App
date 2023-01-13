@@ -1,77 +1,5 @@
 CHome As screen:
 
-    Rectangle2 As rectangle:
-        BorderColor: =RGBA(152, 208, 70, 1)
-        Fill: =RGBA(54, 176, 75, 1)
-        Height: =126
-        Width: =640
-        ZIndex: =1
-
-    Rectangle3 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        BorderThickness: =1.5
-        Fill: =RGBA(235, 235, 235, 1)
-        Width: =212.5
-        Y: =1036
-        ZIndex: =2
-
-    Rectangle3_1 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        BorderThickness: =1.5
-        Fill: =RGBA(235, 235, 235, 1)
-        Width: =212.5
-        X: =213
-        Y: =1036
-        ZIndex: =3
-
-    Rectangle3_2 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        BorderThickness: =1.5
-        Fill: =RGBA(235, 235, 235, 1)
-        Width: =212.5
-        X: =427
-        Y: =1036
-        ZIndex: =4
-
-    HamburgerIcon1 As icon.Hamburger:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(214, 223, 238, 1)
-        Icon: =Icon.Hamburger
-        X: =17
-        Y: =31
-        ZIndex: =5
-
-    SearchBar1 As text:
-        BorderThickness: =0
-        Default: =If(!IsBlank(ScannedValue), ScannedValue, "")
-        Font: =Font.Georgia
-        Height: =70
-        HintText: ="Enter Tracking Num..."
-        Size: =18
-        Width: =425
-        X: =107
-        Y: =147
-        ZIndex: =6
-
-    SearchIcon1 As icon.Search:
-        Color: =RGBA(0, 0, 0, 0.84)
-        Height: =43
-        Icon: =Icon.Search
-        Width: =43
-        X: =489
-        Y: =160
-        ZIndex: =7
-
-    Icon5 As icon.HorizontalLine:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        BorderThickness: =1
-        Height: =0
-        Icon: =Icon.HorizontalLine
-        Width: =425
-        X: =107
-        Y: =207
-        ZIndex: =8
-
     QrScanner1 As barcodeScanner:
         BarcodeType: =BarcodeType.QRCode
         Fill: =RGBA(54, 176, 75, 1)
@@ -87,4 +15,97 @@ CHome As screen:
         X: =209
         Y: =950
         ZIndex: =9
+
+    Search1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        SearchBar1 As text:
+            BorderThickness: =0
+            Default: =If(!IsBlank(ScannedValue), ScannedValue, "")
+            Font: =Font.Georgia
+            Height: =70
+            HintText: ="Enter Tracking Num..."
+            Size: =18
+            Width: =425
+            X: =107
+            Y: =147
+            ZIndex: =6
+
+        SearchIcon1 As icon.Search:
+            Color: =RGBA(0, 0, 0, 0.84)
+            Height: =43
+            Icon: =Icon.Search
+            Width: =43
+            X: =489
+            Y: =160
+            ZIndex: =7
+
+        SearchBarLine1 As icon.HorizontalLine:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Width: =425
+            X: =107
+            Y: =207
+            ZIndex: =8
+
+    BottomHUD1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1.5
+            Fill: =RGBA(235, 235, 235, 1)
+            Width: =212.5
+            Y: =1036
+            ZIndex: =2
+
+        Rectangle3_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1.5
+            Fill: =RGBA(235, 235, 235, 1)
+            Width: =212.5
+            X: =213
+            Y: =1036
+            ZIndex: =3
+
+        Rectangle3_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1.5
+            Fill: =RGBA(235, 235, 235, 1)
+            Width: =212.5
+            X: =427
+            Y: =1036
+            ZIndex: =4
+
+    HeaderHUD1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =1
+
+        HamburgerIcon1 As icon.Hamburger:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(214, 223, 238, 1)
+            Icon: =Icon.Hamburger
+            X: =17
+            Y: =31
+            ZIndex: =5
 
