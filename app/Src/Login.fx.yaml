@@ -1,73 +1,37 @@
 Login As screen:
 
-    Rectangle1 As rectangle:
-        BorderColor: =RGBA(171, 198, 174, 1)
-        Fill: =RGBA(171, 198, 174, 1)
-        Height: =180
-        Width: =640
-        ZIndex: =1
-
-    Label2 As label:
+    LoginTxt1 As label:
         Align: =Align.Center
         Font: =Font.Georgia
-        FontWeight: =FontWeight.Bold
+        FontWeight: =FontWeight.Semibold
         Height: =70
-        Size: =21
+        Italic: =true
+        Size: =25
         Text: ="Login"
         Width: =560
         X: =40
-        Y: =55
+        Y: =232
         ZIndex: =2
 
-    UNameEmailInput As text:
-        Default: =
-        Font: =Font.Georgia
-        Height: =70
-        HintText: ="Username/Email"
-        RadiusBottomLeft: =25
-        RadiusBottomRight: =25
-        RadiusTopLeft: =25
-        RadiusTopRight: =25
-        Size: =21
-        Width: =560
-        X: =39
-        Y: =354
-        ZIndex: =3
-
-    PasswordInput As text:
-        Default: =
-        Font: =Font.Georgia
-        Height: =70
-        HintText: ="Password"
-        Mode: =TextMode.Password
-        RadiusBottomLeft: =25
-        RadiusBottomRight: =25
-        RadiusTopLeft: =25
-        RadiusTopRight: =25
-        Size: =21
-        Width: =560
-        X: =39
-        Y: =524
-        ZIndex: =4
-
-    log_in_btn As button:
-        Fill: =RGBA(171, 198, 174, 1)
+    LoginBtn1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
         Font: =Font.Georgia
         Height: =70
         OnSelect: |-
             =If(
-                (UNameEmailInput.Text in customer.Username || UNameEmailInput.Text in customer.Email) && PasswordInput.Text in customer.Password,
-                Navigate(CHome);
-                Notify(
-                    "Welcome back " & LookUp(
-                        customer,
-                        Password = PasswordInput.Text,
-                        Username
-                    ), Success, 1500
-                )
-            );
-            Reset(UNameEmailInput);
-            Reset(PasswordInput);
+                IsMatch(UNameEmailInput1.Text, Email),
+                    If(UNameEmailInput1.Text in customer.Email && PasswordInput1.Text in customer.Password,
+                        Navigate(CHome);
+                        Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500)
+                        //Add In text for when login details doesnt match
+                    ), 
+                    If(UNameEmailInput1.Text in customer.Username && PasswordInput1.Text in customer.Password,
+                        Navigate(CHome);
+                        Notify("Welcome back " & UNameEmailInput1.Text, Success,1500)
+                        //Add In text for when login details doesnt match
+                    )
+            )
+            Reset(UNameEmailInput1);Reset(PasswordInput1);
             //this doesnt check same line so i need adjust
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
@@ -76,18 +40,151 @@ Login As screen:
         Size: =24
         Text: ="Login"
         Width: =280
-        X: =179
-        Y: =693
+        X: =180
+        Y: =719
         ZIndex: =5
 
-    Label3 As label:
+    Txt2SignUp1 As label:
         Font: =Font.Georgia
         Height: =70
         Italic: =true
         OnSelect: =Navigate('Sign Up',ScreenTransition.Fade)
         Text: ="Don't have an account? Click here to Sign Up"
         Width: =369
-        X: =134
-        Y: =804
+        X: =135
+        Y: =808
         ZIndex: =6
+
+    ScreenBorder1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =11
+
+        LeftBorder1 As icon.VerticalLine:
+            BorderColor: =RGBA(99, 139, 44, 1)
+            BorderThickness: =2
+            Height: =1136
+            Icon: =Icon.VerticalLine
+            Width: =0
+            ZIndex: =8
+
+        RightBorder1 As icon.VerticalLine:
+            BorderColor: =RGBA(99, 139, 44, 1)
+            BorderThickness: =2
+            Height: =1136
+            Icon: =Icon.VerticalLine
+            Width: =0
+            X: =640
+            ZIndex: =9
+
+        BottomBorder1 As icon.HorizontalLine:
+            BorderColor: =RGBA(127, 178, 57, 1)
+            BorderThickness: =2
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Width: =640
+            Y: =1136
+            ZIndex: =10
+
+    UNameEmailField1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =13
+
+        UNameEmailInput1 As text:
+            Default: =
+            Font: =Font.Georgia
+            Height: =70
+            HintText: ="Username/Email..."
+            PaddingTop: |
+                =0
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =16
+            Width: =560
+            X: =40
+            Y: =372
+            ZIndex: =3
+
+        UNameEmailTxt1 As label:
+            Font: =Font.Georgia
+            Height: =70
+            PaddingBottom: =0
+            PaddingLeft: =0
+            Size: =20
+            Text: |-
+                ="Enter Username/Email:"
+            Width: =560
+            X: =40
+            Y: =313
+            ZIndex: =11
+
+    PasswordField1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =13
+
+        PasswordInput1 As text:
+            Default: =
+            Font: =Font.Georgia
+            Height: =70
+            HintText: ="Password..."
+            Mode: =TextMode.Password
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =16
+            Width: =560
+            X: =40
+            Y: =571
+            ZIndex: =4
+
+        PasswordTxt1 As label:
+            Font: =Font.Georgia
+            Height: =70
+            PaddingBottom: =0
+            PaddingLeft: =0
+            Size: =20
+            Text: |-
+                ="Enter Password:"
+            Width: =560
+            X: =40
+            Y: =510
+            ZIndex: =12
+
+    Header As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =13
+
+        TopBox1 As rectangle:
+            BorderColor: =RGBA(171, 198, 174, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =180
+            Width: =640
+            ZIndex: =1
+
+        AppTitle1 As label:
+            Align: =Align.Center
+            Color: =RGBA(127, 178, 57, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =50
+            Text: ="JaYä"
+            Width: =560
+            X: =38
+            Y: =55
+            ZIndex: =7
 
