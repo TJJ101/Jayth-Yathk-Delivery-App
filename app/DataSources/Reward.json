@@ -8,10 +8,10 @@
     },
     "ConnectedDataSourceInfoNameMapping": {
       "__PowerAppsId__": "Row id",
-      "Points": "Points",
+      "Column1": "Column1",
       "RewardDesc": "RewardDesc",
       "RewardExpiryDate": "RewardExpiryDate",
-      "RewardId": "RewardId"
+      "RewardsTransactionId": "RewardsTransactionId"
     },
     "DatasetName": "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6",
     "EncodeDataset": true,
