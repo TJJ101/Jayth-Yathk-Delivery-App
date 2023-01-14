@@ -33,6 +33,23 @@ Login As screen:
             )
             Reset(UNameEmailInput1);Reset(PasswordInput1);
             //this doesnt check same line so i need adjust
+            
+            /*
+            If(
+                (UNameEmailInput1.Text in customer.Username || UNameEmailInput1.Text in customer.Email) && PasswordInput1.Text in customer.Password,
+                Navigate(CHome);
+                Notify(
+                    "Welcome back " & LookUp(
+                        customer,
+                        Password = PasswordInput1.Text,
+                        Username
+                    ), Success, 1500
+                ) ; Set(CurrentUserId, LookUp(customer, 
+            );
+            Reset(UNameEmailInput1);
+            Reset(PasswordInput1);
+            //this doesnt check same line so i need adjust
+            */
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
         RadiusTopLeft: =20
