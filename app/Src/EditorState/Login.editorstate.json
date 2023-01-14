@@ -95,7 +95,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AppTitle1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -534,7 +534,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1",
-      "ParentIndex": 1,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -823,7 +823,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LeftBorder1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1119,7 +1119,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginBtn1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1408,7 +1408,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginTxt1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1777,7 +1777,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PasswordInput1",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2074,7 +2074,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PasswordTxt1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2327,7 +2327,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RightBorder1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2721,7 +2721,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Txt2SignUp1",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3096,7 +3096,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UNameEmailInput1",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3398,7 +3398,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UNameEmailTxt1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

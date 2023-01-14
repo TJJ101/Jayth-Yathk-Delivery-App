@@ -121,7 +121,7 @@ Login As screen:
 
     Button1 As button:
         Height: =70
-        OnSelect: =If(UNameEmailInput1.Text in customer.Email, Set(Check, true), Set(Check, false))
+        OnSelect: =If(LookUp(customer, Email = UNameEmailInput1.Text, true), Set(Check, true), Set(Check, false))
         Size: =24
         Text: =Check
         Width: =280
