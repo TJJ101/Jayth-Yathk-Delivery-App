@@ -40,7 +40,7 @@ CHome As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Column1
+            Text: =ThisItem.ItemName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image1.Width - 104
             X: =Image1.X + Image1.Width + 24
@@ -54,7 +54,7 @@ CHome As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Column2
+            Text: =ThisItem.ItemDesc
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
             X: =Title1.X

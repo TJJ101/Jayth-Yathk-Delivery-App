@@ -8,10 +8,10 @@
     },
     "ConnectedDataSourceInfoNameMapping": {
       "__PowerAppsId__": "Row id",
-      "Column1": "Column1",
-      "Column2": "Column2",
-      "Column3": "Column3",
+      "ItemDesc": "ItemDesc",
       "ItemId": "ItemId",
+      "ItemName": "ItemName",
+      "ItemPrice": "ItemPrice",
       "ItemQuantity": "ItemQuantity",
       "OrderId2": "OrderId2"
     },
