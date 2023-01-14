@@ -18,7 +18,7 @@ CHome As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =801
-        Items: =Filter(OrderDetails, LookUp(Order, OrderId = OrderId2, CustomerId) = CurrentCustId)
+        Items: =OrderDetails
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
