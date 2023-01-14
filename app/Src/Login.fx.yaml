@@ -20,26 +20,20 @@ Login As screen:
         OnSelect: |-
             =If(
                 IsMatch(UNameEmailInput1.Text, Email),
-                    If(UNameEmailInput1.Text in customer.Email, Notify("Password: " & LookUp(customer, Email = UNameEmailInput1.Text, Password), Warning, 1500);
+                    If(UNameEmailInput1.Text in customer.Email,
                         If(LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text), 
                             Navigate(CHome); 
                             Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500),
                             Notify("Invalid Password", Warning, 1500)
-                        )//,
-                        //Notify("Invalid Login Details 1", Warning, 1500)
-                    )
-                /*
-                    If(UNameEmailInput1.Text in customer.Email && PasswordInput1.Text in customer.Password,
-                        Navigate(CHome);
-                        Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500),
+                        ),
                         Notify("Invalid Login Details 1", Warning, 1500)
-                        //Add In text for when login details doesnt match
-                    )
-                */
-                    , 
-                    If(UNameEmailInput1.Text in customer.Username && PasswordInput1.Text in customer.Password,
-                        Navigate(CHome);
-                        Notify("Welcome back " & UNameEmailInput1.Text, Success,1500),
+                    ), 
+                    If(UNameEmailInput1.Text in customer.Username,
+                        If(LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Navigate(CHome);
+                            Notify("Welcome back " & UNameEmailInput1.Text, Success,1500),
+                            Notify("Invalid Password", Warning, 1500)
+                        ),
                         Notify("Invalid Login Details 2", Warning, 1500)
                         //Add In text for when login details doesnt match
                     )
@@ -118,16 +112,6 @@ Login As screen:
             Width: =640
             Y: =1136
             ZIndex: =10
-
-    Button1 As button:
-        Height: =70
-        OnSelect: =If(LookUp(customer, Email = UNameEmailInput1.Text, true), Set(Check, true), Set(Check, false))
-        Size: =24
-        Text: =Check
-        Width: =280
-        X: =180
-        Y: =927
-        ZIndex: =13
 
     UNameEmailField1 As group:
         Height: =5
