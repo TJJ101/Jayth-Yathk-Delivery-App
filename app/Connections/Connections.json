@@ -16,6 +16,23 @@
     ],
     "id": "1a3ad4d4-a966-4ef3-9557-bb33f76d0531"
   },
+  "243e7689-e654-4ea5-bcb6-724281d7bef9": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "c55e62f1-6b29-4254-b1bd-5a37330c8741"
+    ],
+    "id": "243e7689-e654-4ea5-bcb6-724281d7bef9"
+  },
   "30907c22-7f48-49da-a3b9-27539d9f4aba": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -30,6 +47,9 @@
         "dataSources": {
           "customer": {
             "tableName": "customer"
+          },
+          "OrderDetails": {
+            "tableName": "OrderDetails"
           }
         }
       }
@@ -38,7 +58,8 @@
       "customer",
       "PurchaseTransaction",
       "Reward",
-      "RewardTransaction"
+      "RewardTransaction",
+      "OrderDetails"
     ],
     "dependencies": {
       "fileSource": "587b6246-f6b3-445f-934c-838536ba1d49"
@@ -160,6 +181,33 @@
     },
     "dependents": [],
     "id": "c0a6e8dd-01c6-4e66-ae13-513cd289e4db"
+  },
+  "c55e62f1-6b29-4254-b1bd-5a37330c8741": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1599/1.0.1599.3017/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel"
+    },
+    "datasets": {
+      "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6": {
+        "dataSources": {
+          "Order": {
+            "tableName": "Order"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Order"
+    ],
+    "dependencies": {
+      "fileSource": "243e7689-e654-4ea5-bcb6-724281d7bef9"
+    },
+    "dependents": [],
+    "id": "c55e62f1-6b29-4254-b1bd-5a37330c8741"
   },
   "d7331abf-3c29-446c-8a72-49017b85ee87": {
     "connectionParameters": {

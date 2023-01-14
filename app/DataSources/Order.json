@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-09-12T16:52:17.8220000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Column1": "Column1",
+      "Column2": "Column2",
+      "CustomerId": "CustomerId",
+      "OrderDatetime": "OrderDatetime",
+      "OrderId": "OrderId",
+      "OrderPrice": "OrderPrice",
+      "TrackingId": "TrackingId"
+    },
+    "DatasetName": "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Order",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

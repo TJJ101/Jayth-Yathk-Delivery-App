@@ -23,23 +23,24 @@ Login As screen:
                     If(UNameEmailInput1.Text in customer.Email,
                         If(LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text), 
                             Navigate(CHome); 
-                            Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500),
-                            Notify("Invalid Password", Warning, 1500)
+                            Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500);
+                            Set(CurrentCustId, LookUp(customer, Email = UNameEmailInput1.Text, CustomerId)),
+                            Notify("Invalid Password", Error, 1500)
                         ),
-                        Notify("Invalid Login Details 1", Warning, 1500)
+                        Notify("Invalid Login Details", Error, 1500)
                     ), 
                     If(UNameEmailInput1.Text in customer.Username,
                         If(LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Navigate(CHome);
-                            Notify("Welcome back " & UNameEmailInput1.Text, Success,1500),
+                            Notify("Welcome back " & UNameEmailInput1.Text, Success,1500);
+                            Set(CurrentCustId, LookUp(customer, Email = UNameEmailInput1.Text, CustomerId)),
                             Notify("Invalid Password", Warning, 1500)
                         ),
-                        Notify("Invalid Login Details 2", Warning, 1500)
-                        //Add In text for when login details doesnt match
+                        Notify("Invalid Login Details", Error, 1500)
                     )
             );
-            //Reset(UNameEmailInput1);
-            //Reset(PasswordInput1);
+            Reset(UNameEmailInput1);
+            Reset(PasswordInput1);
             //this doesnt check same line so i need adjust
             
             /*
