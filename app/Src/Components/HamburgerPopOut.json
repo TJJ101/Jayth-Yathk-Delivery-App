@@ -60,7 +60,7 @@
         "Name": "Arrow1",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 110,
+        "PublishOrderIndex": 109,
         "Rules": [
           {
             "Category": "Design",
@@ -160,7 +160,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Set(show, !show);\r\nIf(!show, Set(hide, true))",
+            "InvariantScript": "Set(HamburgVisible, !HamburgVisible)",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -297,7 +297,7 @@
         "Name": "Button1",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 111,
+        "PublishOrderIndex": 110,
         "Rules": [
           {
             "Category": "Data",
@@ -361,7 +361,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(209, 232, 178, 100)",
+            "InvariantScript": "RGBA(0, 0, 0, 100)",
             "Property": "HoverColor",
             "RuleProviderType": "Unknown"
           },
@@ -581,7 +581,7 @@
         "Name": "Icon2_1",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 112,
+        "PublishOrderIndex": 111,
         "Rules": [
           {
             "Category": "Design",
@@ -793,7 +793,7 @@
         "Name": "Icon2",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 113,
+        "PublishOrderIndex": 112,
         "Rules": [
           {
             "Category": "Design",
@@ -1073,7 +1073,7 @@
         "Name": "Button1_1",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 114,
+        "PublishOrderIndex": 113,
         "Rules": [
           {
             "Category": "Data",
@@ -1137,7 +1137,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(209, 232, 178, 100)",
+            "InvariantScript": "RGBA(0, 0, 0, 100)",
             "Property": "HoverColor",
             "RuleProviderType": "Unknown"
           },
@@ -1357,7 +1357,7 @@
         "Name": "Icon2_2",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 115,
+        "PublishOrderIndex": 114,
         "Rules": [
           {
             "Category": "Design",
@@ -1584,7 +1584,7 @@
         "Name": "Icon4",
         "Parent": "HamburgerPopOut",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 116,
+        "PublishOrderIndex": 115,
         "Rules": [
           {
             "Category": "Design",
@@ -1775,11 +1775,18 @@
       },
       "X",
       "Y",
-      "ZIndex"
+      "ZIndex",
+      "Back"
     ],
-    "LastModifiedTimestamp": "638093822759909895",
+    "LastModifiedTimestamp": "638093827431747813",
     "Name": "HamburgerPopOut",
     "Rules": [
+      {
+        "Category": "Data",
+        "InvariantScript": "true",
+        "Property": "Back",
+        "RuleProviderType": "System"
+      },
       {
         "Category": "Design",
         "InvariantScript": "1",
@@ -1827,7 +1834,17 @@
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
-  "CustomProperties": [],
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Back",
+      "Hidden": true,
+      "Name": "Back",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Hides Hamburger Icon",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
   "FirstParty": true,
   "Id": "http://microsoft.com/appmagic/Component",
   "IsComponentLocked": false,
@@ -1836,7 +1853,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638093822759909895",
+  "LastModifiedTimestamp": "638093827431747813",
   "Name": "5b6794c703974214a290962752490273",
   "OverridableProperties": {},
   "Version": "638093599453212782"
