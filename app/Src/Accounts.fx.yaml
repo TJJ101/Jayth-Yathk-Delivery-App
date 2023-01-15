@@ -38,10 +38,31 @@ Accounts As screen:
         Font: =Font.Georgia
         FontWeight: =FontWeight.Semibold
         Height: =70
-        Size: =21
+        Size: =30
         Text: =LookUp(customer, CustomerId = CurrentCustId, Username)
         Width: =369
         X: =135
         Y: =389
         ZIndex: =4
+
+    Label2 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Points: " & LookUp(customer, CustomerId = CurrentCustId, Points)
+        Width: =477
+        X: =81
+        Y: =495
+        ZIndex: =5
+
+    Icon5 As icon.HorizontalLine:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Height: =0
+        Icon: =Icon.HorizontalLine
+        Width: =477
+        X: =81
+        Y: =480
+        ZIndex: =6
 
