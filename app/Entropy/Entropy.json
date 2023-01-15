@@ -56,7 +56,7 @@
     "HamburgPopupBack1": 136,
     "Header": 87,
     "Header2": 69,
-    "HeaderHUD1": 115,
+    "HeaderHud1": 156,
     "HeaderHUD2": 125,
     "HeaderHud2.5": 38,
     "HeaderHud2.5_1": 149,
@@ -136,7 +136,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/15/2023 15:11:46",
+  "HeaderLastSavedDateTimeUTC": "01/15/2023 15:13:48",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1a3ad4d4-a966-4ef3-9557-bb33f76d0531": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/1c48a45f3dba463db82827fb3ac8a252\"",
@@ -196,7 +196,8 @@
       "AppTxt2": 0,
       "TopBox2": 1
     },
-    "HeaderHUD1": {
+    "HeaderHud1": {
+      "AppTxt2_1": 2,
       "HamburgerIcon1": 1,
       "Rectangle2": 0
     },
@@ -306,7 +307,7 @@
     "HamburgPopupBack1": {},
     "Header": {},
     "Header2": {},
-    "HeaderHUD1": {},
+    "HeaderHud1": {},
     "HeaderHUD2": {},
     "HeaderHud2.5": {},
     "HeaderHud2.5_1": {},
@@ -440,7 +441,7 @@
     "HamburgPopupBack1": 50,
     "Header": 3,
     "Header2": 18,
-    "HeaderHUD1": 49,
+    "HeaderHud1": 0,
     "HeaderHUD2": 78,
     "HeaderHud2.5": 93,
     "HeaderHud2.5_1": 120,

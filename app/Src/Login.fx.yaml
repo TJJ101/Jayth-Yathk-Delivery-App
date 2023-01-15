@@ -237,6 +237,7 @@ Login As screen:
     TypeOfUser1 As dropdown:
         ChevronBackground: =RGBA(99, 139, 44, 1)
         Color: =RGBA(99, 139, 44, 1)
+        Default: ="User"
         Font: =Font.Georgia
         Height: =38
         Items: =["User", "Deliverer"]

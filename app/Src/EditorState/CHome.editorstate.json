@@ -1636,7 +1636,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "HeaderHUD1": {
+    "HeaderHud1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -1654,7 +1654,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "HeaderHUD1",
+      "Name": "HeaderHud1",
       "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
