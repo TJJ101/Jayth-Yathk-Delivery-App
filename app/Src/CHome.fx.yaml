@@ -220,6 +220,19 @@ CHome As screen:
             Y: =1036
             ZIndex: =3
 
+    AppTxt2_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(127, 178, 57, 1)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =40
+        Text: ="JaYäpp"
+        Width: =560
+        X: =40
+        Y: =28
+        ZIndex: =19
+
     HamburgerPopup1 As group:
         Height: =5
         Width: =5
@@ -240,7 +253,7 @@ CHome As screen:
             BorderThickness: =2
             Fill: =RGBA(0, 0, 0, 1)
             Height: =55
-            OnSelect: =Navigate(Accounts, ScreenTransition.Fade)
+            OnSelect: =Set(HamburgVisible, !HamburgVisible)
             Visible: =HamburgVisible
             Width: =55
             X: =18

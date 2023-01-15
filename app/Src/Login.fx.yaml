@@ -19,46 +19,66 @@ Login As screen:
         Height: =70
         OnSelect: |-
             =If(
-                IsMatch(UNameEmailInput1.Text, Email),
-                    If(UNameEmailInput1.Text in customer.Email,
-                        If(LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text), 
-                            Navigate(CHome); 
+                TypeOfUser1.Selected.Value = "User",
+                //Check customer table since logging in is user
+                If(
+                    IsMatch(
+                        UNameEmailInput1.Text, Email
+                    ),
+                    If(
+                        UNameEmailInput1.Text in customer.Email,
+                        If(
+                            LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Navigate(CHome);
                             Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500);
-                            Set(CurrentCustId, LookUp(customer, Email = UNameEmailInput1.Text, CustomerId)),
-                            Notify("Invalid Password", Error, 1500)
+                            Set(CurrentCustId, LookUp( customer, Email = UNameEmailInput1.Text, CustomerId)),
+                            Notify("Invalid Password",Error,1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
-                    ), 
-                    If(UNameEmailInput1.Text in customer.Username,
-                        If(LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                    ),
+                    If(
+                        UNameEmailInput1.Text in customer.Username,
+                        If(
+                            LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Navigate(CHome);
-                            Notify("Welcome back " & UNameEmailInput1.Text, Success,1500);
-                            Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId)),
-                            Notify("Invalid Password", Warning, 1500)
+                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
+                            Set( CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId)),
+                            Notify( "Invalid Password", Warning, 1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
                     )
+                ),
+                //Check deliever table
+                If(
+                    IsMatch(
+                        UNameEmailInput1.Text, Email
+                    ),
+                    If(
+                        UNameEmailInput1.Text in deliverer.Email,
+                        If(
+                            LookUp(deliverer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Navigate(CHome);
+                            Notify("Welcome back " & LookUp(deliverer, Password = PasswordInput1.Text, Username), Success, 1500);
+                            Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId)),
+                            Notify("Invalid Password",Error,1500)
+                        ),
+                        Notify("Invalid Login Details", Error, 1500)
+                    ),
+                    If(
+                        UNameEmailInput1.Text in deliverer.Username,
+                        If(
+                            LookUp(deliverer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Navigate(CHome);
+                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
+                            Set(CurrentDelivererId, LookUp(deliverer, Username = UNameEmailInput1.Text, DelivererId)),
+                            Notify( "Invalid Password", Warning, 1500)
+                        ),
+                        Notify("Invalid Login Details", Error, 1500)
+                    )
+                )
             );
             Reset(UNameEmailInput1);
             Reset(PasswordInput1);
-            //this doesnt check same line so i need adjust
-            
-            /*
-            If(
-                (UNameEmailInput1.Text in customer.Username || UNameEmailInput1.Text in customer.Email) && PasswordInput1.Text in customer.Password,
-                Navigate(CHome);
-                Notify(
-                    "Welcome back " & LookUp(
-                        customer,
-                        Password = PasswordInput1.Text,
-                        Username
-                    ), Success, 1500
-                ) ; Set(CurrentUserId, LookUp(customer, 
-            );
-            Reset(UNameEmailInput1);
-            Reset(PasswordInput1);
-            //this doesnt check same line so i need adjust
-            */
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
         RadiusTopLeft: =20
@@ -197,9 +217,9 @@ Login As screen:
             FontWeight: =FontWeight.Bold
             Height: =70
             Size: =50
-            Text: ="JaYä"
+            Text: ="JaYäpp"
             Width: =560
-            X: =38
+            X: =40
             Y: =55
             ZIndex: =7
 
@@ -213,4 +233,17 @@ Login As screen:
         X: =133
         Y: =800
         ZIndex: =14
+
+    TypeOfUser1 As dropdown:
+        ChevronBackground: =RGBA(99, 139, 44, 1)
+        Color: =RGBA(99, 139, 44, 1)
+        Font: =Font.Georgia
+        Height: =38
+        Items: =["User", "Deliverer"]
+        SelectionFill: =RGBA(99, 139, 44, 1)
+        Size: =12
+        Width: =148
+        X: =452
+        Y: =257
+        ZIndex: =15
 

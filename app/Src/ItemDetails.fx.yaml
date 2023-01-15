@@ -200,10 +200,12 @@ ItemDetails As screen:
 
         BackArrow1 As icon.BackArrow:
             Color: =RGBA(255, 255, 255, 1)
+            Height: =55
             Icon: =Icon.BackArrow
             OnSelect: =Back(ScreenTransition.UnCover)
-            X: =17
-            Y: =31
+            Width: =55
+            X: =24
+            Y: =35
             ZIndex: =3
 
     OrderViewForm1 As formViewer:
