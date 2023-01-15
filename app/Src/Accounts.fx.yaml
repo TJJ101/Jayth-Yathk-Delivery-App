@@ -1,0 +1,45 @@
+Accounts As screen:
+
+    Icon4 As icon.Person:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =140
+        Icon: =Icon.Person
+        Width: =140
+        X: =250
+        Y: =249
+        ZIndex: =3
+
+    "'HeaderHud2.5_1' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+        Rectangle2_4 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =1
+
+        BackArrow1_1 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCover)
+            X: =17
+            Y: =31
+            ZIndex: =2
+
+    Label1 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: =LookUp(customer, CustomerId = CurrentCustId, Username)
+        Width: =369
+        X: =135
+        Y: =389
+        ZIndex: =4
+
