@@ -153,7 +153,7 @@ CHome As screen:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(214, 223, 238, 1)
             Icon: =Icon.Hamburger
-            OnSelect: =
+            OnSelect: =Set(HamburgVisible, !HamburgVisible)
             Width: =66
             X: =18
             Y: =31
