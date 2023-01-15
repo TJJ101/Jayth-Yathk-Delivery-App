@@ -33,7 +33,7 @@ Login As screen:
                         If(LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Navigate(CHome);
                             Notify("Welcome back " & UNameEmailInput1.Text, Success,1500);
-                            Set(CurrentCustId, LookUp(customer, Email = UNameEmailInput1.Text, CustomerId)),
+                            Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId)),
                             Notify("Invalid Password", Warning, 1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
@@ -204,12 +204,13 @@ Login As screen:
             ZIndex: =7
 
     Txt2SignUp1 As label:
+        Align: =Align.Center
         Font: =Font.Georgia
         Height: =70
         OnSelect: =Navigate('Sign Up',ScreenTransition.Fade)
         Text: ="Don't have an account? Click here to Sign Up"
-        Width: =368
-        X: =136
-        Y: =808
+        Width: =370
+        X: =133
+        Y: =800
         ZIndex: =14
 
