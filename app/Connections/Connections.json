@@ -59,7 +59,8 @@
       "PurchaseTransaction",
       "Reward",
       "RewardTransaction",
-      "OrderDetails"
+      "OrderDetails",
+      "Order"
     ],
     "dependencies": {
       "fileSource": "587b6246-f6b3-445f-934c-838536ba1d49"

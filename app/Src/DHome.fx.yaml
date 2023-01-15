@@ -2,7 +2,7 @@ DHome As screen:
 
     Rectangle2_1 As rectangle:
         BorderColor: =RGBA(152, 208, 70, 1)
-        Fill: =RGBA(171, 198, 174, 1)
+        Fill: =RGBA(56, 89, 12, 1)
         Height: =126
         Width: =640
         ZIndex: =1

@@ -103,10 +103,10 @@
   },
   "PublishInfo": {
     "AppName": "Jayth Yathk Delivery App",
-    "BackgroundColor": "RGBA(0,176,240,1)",
+    "BackgroundColor": "rgba(99, 139, 44, 1)",
     "IconColor": "RGBA(255,255,255,1)",
-    "IconName": "Edit",
-    "LogoFileName": "",
+    "IconName": "World",
+    "LogoFileName": "logo.jpg",
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
@@ -116,7 +116,9 @@
     "Login",
     "Sign Up",
     "CHome",
+    "CGrpDelivery",
     "DHome",
-    "Burger_DropDown"
+    "Burger_DropDown",
+    "ItemDetails"
   ]
 }

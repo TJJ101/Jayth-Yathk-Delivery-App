@@ -103,27 +103,6 @@ Login As screen:
             Y: =1136
             ZIndex: =10
 
-    Txt2SignUp1 As button:
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.Georgia
-        FontWeight: =FontWeight.Lighter
-        Height: =70
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(0, 0, 0, 1)
-        OnSelect: =Navigate('Sign Up',ScreenTransition.Fade)
-        PressedBorderColor: =RGBA(0, 0, 0, 1)
-        PressedColor: =RGBA(0, 0, 0, 1)
-        Size: =13
-        Text: ="Don't have an account? Click here to Sign Up"
-        Width: =369
-        X: =135
-        Y: =808
-        ZIndex: =13
-
     UNameEmailField1 As group:
         Height: =5
         Width: =5
@@ -223,4 +202,14 @@ Login As screen:
             X: =38
             Y: =55
             ZIndex: =7
+
+    Txt2SignUp1 As label:
+        Font: =Font.Georgia
+        Height: =70
+        OnSelect: =Navigate('Sign Up',ScreenTransition.Fade)
+        Text: ="Don't have an account? Click here to Sign Up"
+        Width: =368
+        X: =136
+        Y: =808
+        ZIndex: =14
 
