@@ -178,3 +178,33 @@ CHome As screen:
             Y: =31
             ZIndex: =5
 
+    Label1 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: ="Tracking"
+        Width: =129
+        X: =41
+        Y: =1051
+        ZIndex: =11
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Height: =100
+        Size: =21
+        Text: ="Group delivery (?)"
+        Width: =129
+        X: =254
+        Y: =1036
+        ZIndex: =12
+
+    Label1_2 As label:
+        Align: =Align.Center
+        Height: =100
+        Size: =21
+        Text: ="History"
+        Width: =129
+        X: =468
+        Y: =1036
+        ZIndex: =13
+
