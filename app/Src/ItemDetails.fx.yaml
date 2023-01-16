@@ -352,7 +352,8 @@ ItemDetails As screen:
         BorderThickness: =2
         Height: =0
         Icon: =Icon.HorizontalLine
-        Width: =640
+        Width: =490
+        X: =75
         Y: =438
         ZIndex: =6
 

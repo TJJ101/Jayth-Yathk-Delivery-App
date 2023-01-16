@@ -8,16 +8,18 @@
     },
     "ConnectedDataSourceInfoNameMapping": {
       "__PowerAppsId__": "Row id",
-      "Column1": "Column1",
+      "PointsReq": "PointsReq",
       "RewardDesc": "RewardDesc",
-      "RewardExpiryDate": "RewardExpiryDate",
-      "RewardsTransactionId": "RewardsTransactionId"
+      "RewardExpiry": "RewardExpiry",
+      "RewardId": "RewardId",
+      "RewardName": "RewardName",
+      "RewardType": "RewardType"
     },
     "DatasetName": "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Reward",
+    "Name": "Rewards",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
