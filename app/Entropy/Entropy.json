@@ -110,6 +110,7 @@
     "OrderDetailsViewForm1": 72,
     "OrderPrice_DataCard1": 68,
     "OrderViewForm1": 61,
+    "OwnToggle1": 163,
     "Password_DataCard1": 125,
     "PasswordField1": 151,
     "PasswordInput1": 145,
@@ -146,7 +147,6 @@
     "Title3": 39,
     "ToAccBtn1": 9,
     "ToAccBtn1_1": 46,
-    "Toggle1": 163,
     "TopBox1": 136,
     "TopBox2": 104,
     "ToRewardsBtn1": 14,
@@ -167,7 +167,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/16/2023 08:35:16",
+  "HeaderLastSavedDateTimeUTC": "01/16/2023 08:41:04",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1a3ad4d4-a966-4ef3-9557-bb33f76d0531": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/1c48a45f3dba463db82827fb3ac8a252\"",
@@ -188,13 +188,12 @@
   "OrderDataSource": {
     "customer": 0,
     "CustomGallerySample": 1,
-    "deliverer": 8,
-    "DropDownSample": 7,
-    "Order": 5,
-    "OrderDetails": 6,
+    "deliverer": 7,
+    "DropDownSample": 6,
+    "Order": 4,
+    "OrderDetails": 5,
     "PurchaseTransaction": 2,
-    "Rewards": 3,
-    "RewardTransaction": 4
+    "RewardTransaction": 3
   },
   "OrderGroupControls": {
     "BottomHud1": {
@@ -422,6 +421,7 @@
     "OrderDetailsViewForm1": {},
     "OrderPrice_DataCard1": {},
     "OrderViewForm1": {},
+    "OwnToggle1": {},
     "Password_DataCard1": {},
     "PasswordField1": {},
     "PasswordInput1": {},
@@ -458,7 +458,6 @@
     "Title3": {},
     "ToAccBtn1": {},
     "ToAccBtn1_1": {},
-    "Toggle1": {},
     "TopBox1": {},
     "TopBox2": {},
     "ToRewardsBtn1": {},
@@ -587,6 +586,7 @@
     "OrderDetailsViewForm1": 108,
     "OrderPrice_DataCard1": 104,
     "OrderViewForm1": 97,
+    "OwnToggle1": 140,
     "Password_DataCard1": 40,
     "PasswordField1": 12,
     "PasswordInput1": 13,
@@ -623,7 +623,6 @@
     "Title3": 143,
     "ToAccBtn1": 55,
     "ToAccBtn1_1": 135,
-    "Toggle1": 140,
     "TopBox1": 0,
     "TopBox2": 17,
     "ToRewardsBtn1": 61,
@@ -668,7 +667,7 @@
       "typedDataCard": 11
     },
     "DeserializationLoadTime": 2.7835321,
-    "ErrorCount": 0
+    "ErrorCount": 5
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

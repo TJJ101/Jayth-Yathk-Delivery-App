@@ -270,15 +270,19 @@ CRewards As screen:
         Y: =140
         ZIndex: =16
 
-    Toggle1 As toggleSwitch:
+    OwnToggle1 As toggleSwitch:
+        FalseFill: =RGBA(187, 221, 140, 1)
         FalseText: ="Show Owned"
         Font: =Font.Georgia
         Height: =32
-        Size: =21
+        OnCheck: =Set(ShowOwned, true)
+        OnUncheck: =Set(ShowOwned, false)
+        Size: =18
         TextPosition: =TextPosition.Left
-        TrueText: ="Show UnOwned"
-        Width: =255
-        X: =344
+        TrueFill: =RGBA(99, 139, 44, 1)
+        TrueText: ="Show Unowned"
+        Width: =240
+        X: =359
         Y: =237
         ZIndex: =17
 
