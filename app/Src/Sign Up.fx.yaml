@@ -136,7 +136,7 @@
             DisplayName: =DataSourceInfo([@customer],DataSourceInfo.DisplayName,"MobileNo")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =143
-            MaxLength: =DataSourceInfo([@customer], DataSourceInfo.MaxLength, "MobileNo")
+            MaxLength: =8
             Required: =true
             Update: =DataCardValue2.Text
             Width: =640

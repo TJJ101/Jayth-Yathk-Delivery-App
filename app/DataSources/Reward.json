@@ -19,7 +19,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "RewardsData",
+    "Name": "Reward",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
