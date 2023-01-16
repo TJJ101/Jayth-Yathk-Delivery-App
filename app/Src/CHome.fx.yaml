@@ -207,7 +207,7 @@ CHome As screen:
             BorderColor: =RGBA(232, 244, 217, 1)
             Fill: =RGBA(232, 244, 217, 1)
             Height: =1136
-            OnSelect: =Navigate(Accounts, ScreenTransition.Fade)
+            OnSelect: =
             Visible: =HamburgVisible
             Width: =308
             ZIndex: =12
@@ -227,7 +227,9 @@ CHome As screen:
             Color: =RGBA(0, 0, 0, 1)
             Height: =55
             Icon: =Icon.Leave
-            OnSelect: =Navigate(Login, ScreenTransition.Fade)
+            OnSelect: |-
+                =Navigate(Login, ScreenTransition.Fade);
+                Set(HamburgVisible, false);
             Visible: =HamburgVisible
             Width: =55
             X: =18
@@ -242,7 +244,9 @@ CHome As screen:
             Height: =70
             HoverColor: =RGBA(0, 0, 0, 100)
             HoverFill: =RGBA(209, 232, 178, 100)
-            OnSelect: =Navigate(Accounts, ScreenTransition.Fade)
+            OnSelect: |-
+                =Navigate(Accounts, ScreenTransition.Fade);
+                Set(HamburgVisible, false);
             Size: =20
             Text: ="Account"
             Visible: =HamburgVisible
@@ -280,7 +284,9 @@ CHome As screen:
             Height: =70
             HoverColor: =RGBA(0, 0, 0, 100)
             HoverFill: =RGBA(209, 232, 178, 100)
-            OnSelect: =Navigate(Accounts, ScreenTransition.Fade)
+            OnSelect: |-
+                =Navigate(CRewards, ScreenTransition.Fade);
+                Set(HamburgVisible, false);
             Size: =20
             Text: ="Rewards"
             Visible: =HamburgVisible
@@ -293,7 +299,7 @@ CHome As screen:
             BorderThickness: =1
             Height: =0
             Icon: =Icon.HorizontalLine
-            OnSelect: =Navigate(Accounts, ScreenTransition.Fade)
+            OnSelect: =
             Visible: =HamburgVisible
             Width: =308
             Y: =269
