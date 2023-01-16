@@ -4,6 +4,9 @@ CRewards As screen:
         Height: =757
         Items: =Reward
         Layout: =Layout.Vertical
+        OnSelect: |-
+            =Set(SelectedRewardId, ThisItem.RewardId);
+            Navigate(RewardDetails,ScreenTransition.CoverRight)
         TemplatePadding: =0
         TemplateSize: =Min(220, Self.Height - 60)
         Y: =269

@@ -120,6 +120,7 @@
     "DHome",
     "ItemDetails",
     "Accounts",
-    "CRewards"
+    "CRewards",
+    "RewardDetails"
   ]
 }
