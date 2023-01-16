@@ -2,7 +2,7 @@ CRewards As screen:
 
     "RewardsGallery As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
         Height: =757
-        Items: =Rewards
+        Items: =RewardsData
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(220, Self.Height - 60)
@@ -16,7 +16,7 @@ CRewards As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.PointsReq
+            Text: =ThisItem.RewardName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image2.Width - 80
             X: =32
