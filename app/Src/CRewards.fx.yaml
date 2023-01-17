@@ -1,8 +1,9 @@
 CRewards As screen:
+    OnVisible: =Set(ShowOwned, false)
 
     "RewardsGallery As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
         Height: =757
-        Items: =Reward
+        Items: =If(ShowOwned = false, Reward)
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedRewardId, ThisItem.RewardId);

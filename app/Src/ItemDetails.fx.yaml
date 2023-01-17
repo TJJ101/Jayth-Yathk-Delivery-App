@@ -2,10 +2,10 @@ ItemDetails As screen:
 
     OrderDetailsViewForm1 As formViewer:
         DataSource: =OrderDetails
-        Height: =678
+        Height: =641
         Item: =LookUp(OrderDetails, OrderId2 = SelectedOrderId)
         Width: =640
-        Y: =458
+        Y: =494
         ZIndex: =4
 
         ItemName_DataCard1 As typedDataCard.textualViewCard:
