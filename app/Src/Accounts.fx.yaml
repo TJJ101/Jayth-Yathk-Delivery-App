@@ -2,11 +2,11 @@ Accounts As screen:
 
     Icon4 As icon.Person:
         Color: =RGBA(0, 0, 0, 1)
-        Height: =140
+        Height: =163
         Icon: =Icon.Person
-        Width: =140
-        X: =250
-        Y: =249
+        Width: =183
+        X: =228
+        Y: =221
         ZIndex: =3
 
     "'HeaderHud2.5_1' As group":
@@ -53,7 +53,7 @@ Accounts As screen:
             ="Points: " & LookUp(customer, CustomerId = CurrentCustId, Points)
         Width: =477
         X: =81
-        Y: =495
+        Y: =656
         ZIndex: =5
 
     Icon5 As icon.HorizontalLine:
@@ -65,4 +65,26 @@ Accounts As screen:
         X: =81
         Y: =480
         ZIndex: =6
+
+    Label2_1 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Email: " & LookUp(customer, CustomerId = CurrentCustId, Email)
+        Width: =477
+        X: =81
+        Y: =516
+        ZIndex: =7
+
+    Label2_2 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Phone Num: " & LookUp(customer, CustomerId = CurrentCustId, MobileNo)
+        Width: =477
+        X: =81
+        Y: =586
+        ZIndex: =8
 

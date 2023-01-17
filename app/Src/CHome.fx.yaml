@@ -3,13 +3,13 @@ CHome As screen:
 
     "TrackingGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =801
-        Items: =If(IsBlank(SearchBar1), Filter(Order, CustomerId = CurrentCustId), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
+        Items: =If(IsBlank(SearchBar1), Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState <> "Delivered"), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedOrderId, ThisItem.OrderId);
             Navigate(ItemDetails,ScreenTransition.CoverRight)
         TemplatePadding: =0
-        TemplateSize: =134
+        TemplateSize: =179
         Y: =235
         ZIndex: =4
 
@@ -35,8 +35,7 @@ CHome As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: |-
-                ="Order Date: " & ThisItem.OrderDatetime
+            Text: =ThisItem.DeliveryAddress
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -55,7 +54,7 @@ CHome As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Subtitle1.Y + Subtitle1.Height + 4
+            Y: =Label7.Y + Label7.Height + 4
             ZIndex: =3
 
         NextArrow1 As icon.ChevronRight:
@@ -78,8 +77,26 @@ CHome As screen:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
-            Y: =132
+            Y: =178
             ZIndex: =5
+
+        Label7 As label:
+            Height: |
+                =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: |-
+                ="Estimated Delivery Date: " & Text(ThisItem.OrderStatusDateTime,"dd/mmm/yyyy")
+            Width: |
+                =Parent.TemplateWidth - 104
+            X: =32
+            Y: |
+                =Subtitle1.Y + Subtitle1.Height + 2
+            ZIndex: =6
 
     QrScanner1 As barcodeScanner:
         BarcodeType: =BarcodeType.QRCode
@@ -149,6 +166,7 @@ CHome As screen:
             Font: =Font.Georgia
             FontWeight: =FontWeight.Normal
             Height: =100
+            OnSelect: =Navigate(CHistory, Pop)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -305,15 +323,6 @@ CHome As screen:
             Y: =269
             ZIndex: =19
 
-    Label4 As label:
-        Height: =70
-        Size: =21
-        Text: =If(IsMatch(LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderStatusState), "Order Completed"), "It matches", "It doesnt match")
-        Width: =560
-        X: =39
-        Y: =703
-        ZIndex: =20
-
     HeaderHud1 As group:
         Height: =5
         Width: =5
@@ -350,13 +359,4 @@ CHome As screen:
             X: =18
             Y: =31
             ZIndex: =11
-
-    Label4_1 As label:
-        Height: =70
-        Size: =21
-        Text: =LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderStatusState) & LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderId)
-        Width: =560
-        X: =40
-        Y: =784
-        ZIndex: =21
 

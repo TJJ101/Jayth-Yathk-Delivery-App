@@ -1,0 +1,101 @@
+DDetails As screen:
+
+    MapImage1 As image:
+        Height: =350
+        Image: |-
+            =If(IsMatch(LookUp(Order, OrderId = SelectedOrderId, DeliveryAddress), "599489", Contains), 'Ngee Ann Map',
+                If(IsMatch(LookUp(Order, OrderId = SelectedOrderId, DeliveryAddress), "139651", Contains), 'Singapore Poly Map'))
+        Width: =350
+        X: =145
+        Y: =175
+        ZIndex: =4
+
+    HeaderHud5_1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =4
+
+        Rectangle2_9 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =1
+
+        AppTxt2_8 As label:
+            Align: =Align.Center
+            Color: =RGBA(127, 178, 57, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =40
+            Text: ="JaYäpp"
+            Width: =560
+            X: =40
+            Y: =28
+            ZIndex: =2
+
+        BackArrow1_3 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =55
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCover)
+            Width: =55
+            X: =24
+            Y: =35
+            ZIndex: =3
+
+    Label10 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        PaddingTop: =10
+        Size: =30
+        Text: =LookUp(Order, OrderId = SelectedOrderId, TrackingId)
+        Width: =545
+        X: =47
+        Y: =525
+        ZIndex: =5
+
+    Label11 As label:
+        Height: =70
+        Size: =25
+        Text: ="535 Clementi Rd, Singapore 599489"
+        Width: =445
+        X: =155
+        Y: =616
+        ZIndex: =6
+
+    Label12 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =25
+        Text: |-
+            ="Addr: "
+        Width: =103
+        X: =40
+        Y: =616
+        ZIndex: =7
+
+    Label13 As label:
+        Height: =70
+        Size: =25
+        Text: |-
+            ="Status: " & LookUp(Order, OrderId = SelectedOrderId, OrderStatusState)
+        Width: =560
+        X: =39
+        Y: =707
+        ZIndex: =8
+
+    Label14 As label:
+        Height: =70
+        Size: =25
+        Text: |-
+            =If(LookUp(Order, OrderId = SelectedOrderId, OrderStatusState) = "Delivered", "Date Delivered: " & Text(LookUp(Order, OrderId = SelectedOrderId, OrderStatusDateTime), "dd/mmm/yyyy"), "Delivery Date: " & Text(LookUp(Order, OrderId = SelectedOrderId, OrderStatusDateTime), "dd/mmm/yyyy"))
+        Width: =560
+        X: =39
+        Y: =808
+        ZIndex: =9
+

@@ -117,10 +117,13 @@
     "Sign Up",
     "CHome",
     "CGrpDelivery",
-    "DHome",
     "ItemDetails",
     "Accounts",
     "CRewards",
-    "RewardDetails"
+    "RewardDetails",
+    "CHistory",
+    "DHome",
+    "DHistory",
+    "DDetails"
   ]
 }
