@@ -3,7 +3,7 @@ CHome As screen:
 
     "TrackingGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =801
-        Items: =If(IsBlank(SearchBar1), Filter(Order, CustomerId = CurrentCustId & Or(IsMatch(OrderStatusState, "Order Created"), IsMatch(OrderStatusState, "Order Shipped"), IsMatch(OrderStatusState, "Order Delivered"))), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
+        Items: =If(IsBlank(SearchBar1), Filter(Order, CustomerId = CurrentCustId), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedOrderId, ThisItem.OrderId);
@@ -305,6 +305,15 @@ CHome As screen:
             Y: =269
             ZIndex: =19
 
+    Label4 As label:
+        Height: =70
+        Size: =21
+        Text: =If(IsMatch(LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderStatusState), "Order Completed"), "It matches", "It doesnt match")
+        Width: =560
+        X: =39
+        Y: =703
+        ZIndex: =20
+
     HeaderHud1 As group:
         Height: =5
         Width: =5
@@ -341,4 +350,13 @@ CHome As screen:
             X: =18
             Y: =31
             ZIndex: =11
+
+    Label4_1 As label:
+        Height: =70
+        Size: =21
+        Text: =LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderStatusState) & LookUp(Order, TrackingId = "JYURJYRLU1PP", OrderId)
+        Width: =560
+        X: =40
+        Y: =784
+        ZIndex: =21
 
