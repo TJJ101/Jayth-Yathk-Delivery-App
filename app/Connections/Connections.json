@@ -139,6 +139,9 @@
     "datasets": {
       "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6": {
         "dataSources": {
+          "PurchaseTransaction8": {
+            "tableName": "PurchaseTransaction8"
+          },
           "Reward": {
             "tableName": "Reward"
           }
@@ -146,7 +149,8 @@
       }
     },
     "dataSources": [
-      "Reward"
+      "Reward",
+      "PurchaseTransaction8"
     ],
     "dependencies": {
       "fileSource": "17a860a2-95f8-4c6c-89cf-2776ecef0a82"

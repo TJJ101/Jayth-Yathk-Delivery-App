@@ -1,19 +1,19 @@
-CRewards As screen:
+DRewards As screen:
     OnVisible: =Set(ShowOwned, false)
 
-    Label15_4 As label:
+    Label15_9 As label:
         Align: =Align.Center
         Font: =Font.Georgia
         Height: =70
         Italic: =true
         Size: =18
         Text: ="You currently have no rewards redeemed"
-        Visible: =If(And(CountRows(RewardHistoryGallery1_1.AllItems) = 0, ShowOwned = true), true, false)
+        Visible: =If(And(CountRows(RewardHistoryGallery1_2.AllItems) = 0, ShowOwned = true), true, false)
         Width: =640
         Y: =628
-        ZIndex: =1
+        ZIndex: =4
 
-    "RewardsGallery As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
+    "RewardsGallery_1 As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
         Height: =767
         Items: =Reward
         Layout: =Layout.Vertical
@@ -24,9 +24,9 @@ CRewards As screen:
         TemplateSize: =Min(220, Self.Height - 60)
         Visible: =If(ShowOwned = false, true, false)
         Y: =269
-        ZIndex: =3
+        ZIndex: =5
 
-        Title3 As label:
+        Title3_1 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -35,12 +35,12 @@ CRewards As screen:
             PaddingTop: =0
             Text: =ThisItem.RewardName
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image2.Width - 80
+            Width: =Parent.TemplateWidth - Image2_1.Width - 80
             X: =32
             Y: =32
             ZIndex: =1
 
-        Body3 As label:
+        Body3_1 As label:
             Height: =75
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -49,28 +49,28 @@ CRewards As screen:
             PaddingTop: =0
             Text: =ThisItem.RewardDesc
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
+            Width: =Title3_1.Width
             X: =32
-            Y: =Title3.Y + Title3.Height + 8
+            Y: =Title3_1.Y + Title3_1.Height + 8
             ZIndex: =2
 
-        Image2 As image:
+        Image2_1 As image:
             Height: =160
             Image: =If(ThisItem.RewardType = "Discount", discount, If(IsMatch(ThisItem.RewardName, "Shopee", Contains), shopee, If(IsMatch(ThisItem.RewardName, "ShopBack", Contains), shopeback)))
             OnSelect: =Select(Parent)
             Width: =160
             X: =Parent.TemplateWidth - Self.Width - 32
-            Y: =Title3.Y
+            Y: =Title3_1.Y
             ZIndex: =3
 
-        Separator2 As rectangle:
+        Separator2_1 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
-            Y: =Max(Parent.TemplateHeight - 1, Body3.Y + Body3.Height + 10)
+            Y: =Max(Parent.TemplateHeight - 1, Body3_1.Y + Body3_1.Height + 10)
             ZIndex: =4
 
-        Label5 As label:
+        Label5_1 As label:
             Height: =41
             OnSelect: =Select(Parent)
             PaddingLeft: =0
@@ -82,84 +82,21 @@ CRewards As screen:
             Y: =151
             ZIndex: =5
 
-    BottomHud1_1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =4
-
-        HistoryBtn1_2 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CHistory, Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="History"
-            Width: =213
-            X: =427
-            Y: =1036
-            ZIndex: =2
-
-        GrpDeliveryBtn1_2 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CGrpDelivery, Transition.Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Group Delivery"
-            Width: =213
-            X: =213
-            Y: =1036
-            ZIndex: =4
-
-        TrackingBtn1_2 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CHome, Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Tracking"
-            Width: =213
-            Y: =1036
-            ZIndex: =5
-
-    HeaderHud1_1 As group:
+    HeaderHud1_5 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =20
         ZIndex: =7
 
-        Rectangle2_5 As rectangle:
+        Rectangle2_14 As rectangle:
             BorderColor: =RGBA(152, 208, 70, 1)
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
             ZIndex: =6
 
-        AppTxt2_4 As label:
+        AppTxt2_14 As label:
             Align: =Align.Center
             Color: =RGBA(127, 178, 57, 1)
             Font: =Font.Georgia
@@ -172,7 +109,7 @@ CRewards As screen:
             Y: =28
             ZIndex: =7
 
-        HamburgerIcon1_2 As icon.Hamburger:
+        HamburgerIcon1_6 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(214, 223, 238, 1)
             Icon: =Icon.Hamburger
@@ -182,7 +119,7 @@ CRewards As screen:
             Y: =31
             ZIndex: =8
 
-    Label3 As label:
+    Label3_1 As label:
         Align: =Align.Center
         Font: =Font.Georgia
         FontWeight: =FontWeight.Bold
@@ -194,7 +131,7 @@ CRewards As screen:
         Y: =140
         ZIndex: =9
 
-    OwnToggle1 As toggleSwitch:
+    OwnToggle1_2 As toggleSwitch:
         FalseFill: =RGBA(187, 221, 140, 1)
         FalseText: ="Show Owned"
         Font: =Font.Georgia
@@ -210,7 +147,7 @@ CRewards As screen:
         Y: =218
         ZIndex: =10
 
-    Label9 As label:
+    Label9_1 As label:
         Font: =Font.Georgia
         Height: =54
         Size: =21
@@ -221,9 +158,9 @@ CRewards As screen:
         Y: =206
         ZIndex: =11
 
-    "RewardHistoryGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+    "RewardHistoryGallery1_2 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         Height: =767
-        Items: =Filter(PurchaseTransaction, CustomerId = CurrentCustId)
+        Items: =Filter(PurchaseTransaction8, DelivererId = CurrentDelivererId)
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedRewardId, ThisItem.RewardId);
@@ -234,7 +171,7 @@ CRewards As screen:
         Y: =269
         ZIndex: =12
 
-        Image6_1 As image:
+        Image6_2 As image:
             Height: =128
             Image: =If(LookUp(Reward, RewardId = ThisItem.RewardId, RewardType) = "Discount", discount, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "Shopee", Contains), shopee, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "ShopBack", Contains), shopeback)))
             OnSelect: =Select(Parent)
@@ -243,7 +180,7 @@ CRewards As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        Title5_1 As label:
+        Title5_2 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -252,12 +189,12 @@ CRewards As screen:
             PaddingTop: =0
             Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardName)
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image6_1.Width - 104
-            X: =Image6_1.X + Image6_1.Width + 16
+            Width: =Parent.TemplateWidth - Image6_2.Width - 104
+            X: =Image6_2.X + Image6_2.Width + 16
             Y: =20
             ZIndex: =2
 
-        Subtitle4_1 As label:
+        Subtitle4_2 As label:
             Height: =46
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -267,12 +204,12 @@ CRewards As screen:
             Size: =16
             Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardDesc)
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title5_1.Width
+            Width: =Title5_2.Width
             X: =160
             Y: =68
             ZIndex: =3
 
-        Body7_1 As label:
+        Body7_2 As label:
             Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -282,12 +219,12 @@ CRewards As screen:
             Text: |-
                 ="Redeemed On: " & Text(ThisItem.TranscationDateTime, "dd/mmm/yyyy")
             VerticalAlign: =VerticalAlign.Top
-            Width: =Subtitle4_1.Width
-            X: =Subtitle4_1.X
+            Width: =Subtitle4_2.Width
+            X: =Subtitle4_2.X
             Y: =114
             ZIndex: =4
 
-        NextArrow4_1 As icon.ChevronRight:
+        NextArrow4_2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
@@ -303,21 +240,21 @@ CRewards As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =5
 
-        Separator5_1 As rectangle:
+        Separator5_2 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =6
 
-    HamburgerPopup1_1 As group:
+    HamburgerPopup1_7 As group:
         Height: =5
         Width: =5
         X: =20
         Y: =40
         ZIndex: =15
 
-        HamburgPopupBack1_1 As rectangle:
+        HamburgPopupBack1_7 As rectangle:
             BorderColor: =RGBA(232, 244, 217, 1)
             Fill: =RGBA(232, 244, 217, 1)
             Height: =1136
@@ -326,7 +263,7 @@ CRewards As screen:
             Width: =308
             ZIndex: =13
 
-        HamburgBackBtn1_1 As arrow.backArrow:
+        HamburgBackBtn1_7 As arrow.backArrow:
             BorderThickness: =2
             Fill: =RGBA(0, 0, 0, 1)
             Height: =55
@@ -337,7 +274,7 @@ CRewards As screen:
             Y: =26
             ZIndex: =14
 
-        LogoutBtn1_1 As icon.Leave:
+        LogoutBtn1_7 As icon.Leave:
             Color: =RGBA(0, 0, 0, 1)
             Height: =55
             Icon: =Icon.Leave
@@ -348,7 +285,7 @@ CRewards As screen:
             Y: =1058
             ZIndex: =15
 
-        ToAccBtn1_1 As button:
+        ToAccBtn1_7 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(232, 244, 217, 1)
@@ -366,7 +303,7 @@ CRewards As screen:
             Y: =126
             ZIndex: =16
 
-        Icon2_9 As icon.HorizontalLine:
+        Icon2_28 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderThickness: =1
             Height: =0
@@ -377,7 +314,7 @@ CRewards As screen:
             Y: =196
             ZIndex: =17
 
-        Icon2_10 As icon.HorizontalLine:
+        Icon2_27 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderThickness: =1
             Height: =0
@@ -388,7 +325,7 @@ CRewards As screen:
             Y: =126
             ZIndex: =18
 
-        ToRewardsBtn1_1 As button:
+        ToRewardsBtn1_7 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(232, 244, 217, 1)
@@ -397,7 +334,7 @@ CRewards As screen:
             HoverColor: =RGBA(0, 0, 0, 100)
             HoverFill: =RGBA(209, 232, 178, 100)
             OnSelect: |-
-                =Navigate(CRewards, ScreenTransition.Fade);
+                =Navigate(DRewards, ScreenTransition.Fade);
                 Set(HamburgVisible, false);
             Size: =20
             Text: ="Rewards"
@@ -406,7 +343,7 @@ CRewards As screen:
             Y: =199
             ZIndex: =19
 
-        Icon2_11 As icon.HorizontalLine:
+        Icon2_29 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderThickness: =1
             Height: =0
@@ -416,4 +353,66 @@ CRewards As screen:
             Width: =308
             Y: =269
             ZIndex: =20
+
+    BottomHud1_6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
+
+        HistoryBtn1_8 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            OnSelect: =Navigate(DHistory, Pop)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="History"
+            Width: =213
+            X: =427
+            Y: =1036
+            ZIndex: =1
+
+        ConfirmDeliveryBtn1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Confirm Delivery"
+            Width: =213
+            X: =213
+            Y: =1036
+            ZIndex: =2
+
+        PDeliveryBtn1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            OnSelect: =Navigate(DHome, Pop)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Package Delivery"
+            Width: =213
+            Y: =1036
+            ZIndex: =3
 

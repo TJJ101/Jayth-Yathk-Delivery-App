@@ -7,8 +7,8 @@ CHistory As screen:
         Height: =70
         Italic: =true
         Size: =18
-        Text: ="You currently have no rewards redeemed"
-        Visible: =If(And(CountRows(RewardHistoryGallery1_1.AllItems) = 0, ShowOwned = true), true, false)
+        Text: =If(HistoryChoice = "Delivery", "You currently have no delivery history","You currently have no rewards redeemed")
+        Visible: =If(HistoryChoice = "Delivery", If(CountRows(HistoryGallery1.AllItems) = 0, true, false), If(CountRows(RewardHistoryGallery1.AllItems) = 0, true, false))
         Width: =640
         Y: =636
         ZIndex: =1
