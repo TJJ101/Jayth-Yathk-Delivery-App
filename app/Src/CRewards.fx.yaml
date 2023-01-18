@@ -1,17 +1,30 @@
 CRewards As screen:
     OnVisible: =Set(ShowOwned, false)
 
+    Label15_4 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =18
+        Text: ="You currently have no rewards redeemed"
+        Visible: =If(And(CountRows(RewardHistoryGallery1_1.AllItems) = 0, ShowOwned = true), true, false)
+        Width: =640
+        Y: =628
+        ZIndex: =1
+
     "RewardsGallery As gallery.'BrowseLayout_Flexible_NewsFeed_ver4.0'":
-        Height: =757
-        Items: =If(ShowOwned = false, Reward)
+        Height: =767
+        Items: =Reward
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedRewardId, ThisItem.RewardId);
             Navigate(RewardDetails, CoverRight)
         TemplatePadding: =0
         TemplateSize: =Min(220, Self.Height - 60)
+        Visible: =If(ShowOwned = false, true, false)
         Y: =269
-        ZIndex: =2
+        ZIndex: =3
 
         Title3 As label:
             Height: =Self.Size * 1.8
@@ -93,7 +106,7 @@ CRewards As screen:
             Width: =213
             X: =427
             Y: =1036
-            ZIndex: =1
+            ZIndex: =2
 
         GrpDeliveryBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -112,7 +125,7 @@ CRewards As screen:
             Width: =213
             X: =213
             Y: =1036
-            ZIndex: =3
+            ZIndex: =4
 
         TrackingBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -130,7 +143,7 @@ CRewards As screen:
             Text: ="Tracking"
             Width: =213
             Y: =1036
-            ZIndex: =4
+            ZIndex: =5
 
     HeaderHud1_1 As group:
         Height: =5
@@ -144,7 +157,7 @@ CRewards As screen:
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
-            ZIndex: =5
+            ZIndex: =6
 
         AppTxt2_4 As label:
             Align: =Align.Center
@@ -157,7 +170,7 @@ CRewards As screen:
             Width: =560
             X: =40
             Y: =28
-            ZIndex: =6
+            ZIndex: =7
 
         HamburgerIcon1_2 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -167,7 +180,7 @@ CRewards As screen:
             Width: =66
             X: =18
             Y: =31
-            ZIndex: =7
+            ZIndex: =8
 
     Label3 As label:
         Align: =Align.Center
@@ -179,7 +192,7 @@ CRewards As screen:
         Width: =560
         X: =39
         Y: =140
-        ZIndex: =8
+        ZIndex: =9
 
     OwnToggle1 As toggleSwitch:
         FalseFill: =RGBA(187, 221, 140, 1)
@@ -195,7 +208,7 @@ CRewards As screen:
         Width: =240
         X: =382
         Y: =218
-        ZIndex: =9
+        ZIndex: =10
 
     HamburgerPopup1_1 As group:
         Height: =5
@@ -314,4 +327,93 @@ CRewards As screen:
         X: =18
         Y: =206
         ZIndex: =19
+
+    "RewardHistoryGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+        Height: =767
+        Items: =Filter(PurchaseTransaction, CustomerId = CurrentCustId)
+        Layout: =Layout.Vertical
+        OnSelect: |-
+            =Set(SelectedRewardId, ThisItem.RewardId);
+            Navigate(RewardDetails, CoverRight)
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Visible: =If(ShowOwned = false, false, true)
+        Y: =269
+        ZIndex: =20
+
+        Image6_1 As image:
+            Height: =128
+            Image: =If(LookUp(Reward, RewardId = ThisItem.RewardId, RewardType) = "Discount", discount, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "Shopee", Contains), shopee, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "ShopBack", Contains), shopeback)))
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title5_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardName)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image6_1.Width - 104
+            X: =Image6_1.X + Image6_1.Width + 16
+            Y: =20
+            ZIndex: =2
+
+        Subtitle4_1 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardDesc)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5_1.Width
+            X: =160
+            Y: =68
+            ZIndex: =3
+
+        Body7_1 As label:
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Redeemed On: " & Text(ThisItem.TranscationDateTime, "dd/mmm/yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Subtitle4_1.Width
+            X: =Subtitle4_1.X
+            Y: =114
+            ZIndex: =4
+
+        NextArrow4_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator5_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
 

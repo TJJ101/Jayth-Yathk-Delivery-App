@@ -8,8 +8,7 @@ NewGrpDelivery As screen:
         Size: =18
         Text: ="No Order Applicable for Group Delivery"
         Visible: =If(CountRows(NewGrpDeliveryGallery1.AllItems) = 0, true, false)
-        Width: =560
-        X: =40
+        Width: =640
         Y: =595
         ZIndex: =1
 

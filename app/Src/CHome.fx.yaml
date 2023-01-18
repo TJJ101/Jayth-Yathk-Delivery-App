@@ -9,8 +9,7 @@ CHome As screen:
         Size: =18
         Text: ="You currently have no packages"
         Visible: =If(CountRows(TrackingGallery1.AllItems) = 0, true, false)
-        Width: =560
-        X: =39
+        Width: =640
         Y: =617
         ZIndex: =1
 

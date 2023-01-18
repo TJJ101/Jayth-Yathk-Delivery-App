@@ -1,15 +1,30 @@
 CHistory As screen:
     OnVisible: =
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+    Label15_5 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =18
+        Text: ="You currently have no rewards redeemed"
+        Visible: =If(And(CountRows(RewardHistoryGallery1_1.AllItems) = 0, ShowOwned = true), true, false)
+        Width: =640
+        Y: =636
+        ZIndex: =1
+
+    "RewardHistoryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         Height: =736
         Items: =Filter(PurchaseTransaction, CustomerId = CurrentCustId)
         Layout: =Layout.Vertical
+        OnSelect: |-
+            =Set(SelectedRewardId, ThisItem.RewardId);
+            Navigate(RewardDetails, CoverRight)
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Visible: =If(HistoryChoice = "Delivery", false, true)
         Y: =303
-        ZIndex: =1
+        ZIndex: =2
 
         Image6 As image:
             Height: =128
@@ -87,6 +102,69 @@ CHistory As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =6
 
+    BottomHud1_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        HistoryBtn1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            OnSelect: =Navigate(CHistory, Pop)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="History"
+            Width: =213
+            X: =427
+            Y: =1036
+            ZIndex: =3
+
+        GrpDeliveryBtn1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            OnSelect: =Navigate(CGrpDelivery, Transition.Pop)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Group Delivery"
+            Width: =213
+            X: =213
+            Y: =1036
+            ZIndex: =4
+
+        TrackingBtn1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(235, 235, 235, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Normal
+            Height: =100
+            OnSelect: =Navigate(CHome, Pop)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Tracking"
+            Width: =213
+            Y: =1036
+            ZIndex: =5
+
     "HistoryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =736
         Items: =Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState = "Delivered")
@@ -98,7 +176,7 @@ CHistory As screen:
         TemplateSize: =Min(168, Self.Height - 60)
         Visible: =If(HistoryChoice = "Delivery", true, false)
         Y: =303
-        ZIndex: =4
+        ZIndex: =6
 
         Title4 As label:
             Height: =Self.Size * 1.8
@@ -183,69 +261,6 @@ CHistory As screen:
             Y: =122
             ZIndex: =6
 
-    BottomHud1_2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =4
-
-        HistoryBtn1_3 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CHistory, Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="History"
-            Width: =213
-            X: =427
-            Y: =1036
-            ZIndex: =1
-
-        GrpDeliveryBtn1_3 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CGrpDelivery, Transition.Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Group Delivery"
-            Width: =213
-            X: =213
-            Y: =1036
-            ZIndex: =2
-
-        TrackingBtn1_3 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(235, 235, 235, 1)
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Normal
-            Height: =100
-            OnSelect: =Navigate(CHome, Pop)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Tracking"
-            Width: =213
-            Y: =1036
-            ZIndex: =3
-
     Label4 As label:
         Align: =Align.Center
         Font: =Font.Georgia
@@ -257,7 +272,7 @@ CHistory As screen:
         Width: =560
         X: =39
         Y: =161
-        ZIndex: =8
+        ZIndex: =10
 
     HeaderHud1_2 As group:
         Height: =5
@@ -271,7 +286,7 @@ CHistory As screen:
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
-            ZIndex: =5
+            ZIndex: =7
 
         AppTxt2_6 As label:
             Align: =Align.Center
@@ -284,7 +299,7 @@ CHistory As screen:
             Width: =560
             X: =40
             Y: =28
-            ZIndex: =6
+            ZIndex: =8
 
         HamburgerIcon1_3 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -294,23 +309,7 @@ CHistory As screen:
             Width: =66
             X: =18
             Y: =31
-            ZIndex: =7
-
-    OwnToggle1_1 As toggleSwitch:
-        FalseFill: =RGBA(187, 221, 140, 1)
-        FalseText: =
-        Font: =Font.Georgia
-        Height: =32
-        OnCheck: =Set(HistoryChoice, "Rewards")
-        OnUncheck: =Set(HistoryChoice, "Delivery")
-        Size: =18
-        TextPosition: =TextPosition.Left
-        TrueFill: =RGBA(99, 139, 44, 1)
-        TrueText: =
-        Width: =80
-        X: =536
-        Y: =237
-        ZIndex: =17
+            ZIndex: =9
 
     HamburgerPopup1_2 As group:
         Height: =5
@@ -326,7 +325,7 @@ CHistory As screen:
             OnSelect: =
             Visible: =HamburgVisible
             Width: =308
-            ZIndex: =9
+            ZIndex: =11
 
         HamburgBackBtn1_2 As arrow.backArrow:
             BorderThickness: =2
@@ -337,7 +336,7 @@ CHistory As screen:
             Width: =55
             X: =18
             Y: =26
-            ZIndex: =10
+            ZIndex: =12
 
         LogoutBtn1_2 As icon.Leave:
             Color: =RGBA(0, 0, 0, 1)
@@ -350,7 +349,7 @@ CHistory As screen:
             Width: =55
             X: =18
             Y: =1058
-            ZIndex: =11
+            ZIndex: =13
 
         ToAccBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -368,7 +367,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =12
+            ZIndex: =14
 
         Icon2_12 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -379,7 +378,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =196
-            ZIndex: =13
+            ZIndex: =15
 
         Icon2_13 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -390,7 +389,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =14
+            ZIndex: =16
 
         ToRewardsBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -408,7 +407,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =199
-            ZIndex: =15
+            ZIndex: =17
 
         Icon2_14 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -419,5 +418,21 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =269
-            ZIndex: =16
+            ZIndex: =18
+
+    OwnToggle1_1 As toggleSwitch:
+        FalseFill: =RGBA(187, 221, 140, 1)
+        FalseText: =
+        Font: =Font.Georgia
+        Height: =32
+        OnCheck: =Set(HistoryChoice, "Rewards")
+        OnUncheck: =Set(HistoryChoice, "Delivery")
+        Size: =18
+        TextPosition: =TextPosition.Left
+        TrueFill: =RGBA(99, 139, 44, 1)
+        TrueText: =
+        Width: =80
+        X: =536
+        Y: =237
+        ZIndex: =19
 

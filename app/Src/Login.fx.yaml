@@ -32,7 +32,7 @@ Login As screen:
                         UNameEmailInput1.Text in customer.Email,
                         If(
                             LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
-                            Navigate(CHome);
+                            Navigate(CHome, Pop);
                             Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500);
                             Set(CurrentCustId, LookUp( customer, Email = UNameEmailInput1.Text, CustomerId)),
                             Notify("Invalid Password",Error,1500)
@@ -43,7 +43,7 @@ Login As screen:
                         UNameEmailInput1.Text in customer.Username,
                         If(
                             LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
-                            Navigate(CHome);
+                            Navigate(CHome, Pop);
                             Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
                             Set( CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId)),
                             Notify( "Invalid Password", Warning, 1500)
@@ -60,7 +60,7 @@ Login As screen:
                         UNameEmailInput1.Text in deliverer.Email,
                         If(
                             LookUp(deliverer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
-                            Navigate(DHome);
+                            Navigate(DHome, Pop);
                             Notify("Welcome back " & LookUp(deliverer, Password = PasswordInput1.Text, Username), Success, 1500);
                             Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId)),
                             Notify("Invalid Password",Error,1500)
@@ -71,7 +71,7 @@ Login As screen:
                         UNameEmailInput1.Text in deliverer.Username,
                         If(
                             LookUp(deliverer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
-                            Navigate(DHome);
+                            Navigate(DHome, Pop);
                             Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
                             Set(CurrentDelivererId, LookUp(deliverer, Username = UNameEmailInput1.Text, DelivererId)),
                             Notify( "Invalid Password", Warning, 1500)
