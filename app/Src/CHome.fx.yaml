@@ -3,7 +3,12 @@ CHome As screen:
 
     "TrackingGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =801
-        Items: =If(IsBlank(SearchBar1), Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState <> "Delivered"), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
+        Items: |-
+            =If(IsBlank(SearchBar1), Filter(Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState <> "Delivered"), GroupDeliveryId = 0), Filter(Filter(Order, CustomerId = CurrentCustId), StartsWith(TrackingId, SearchBar1.Text)))
+            
+            /*
+            GroupBy(Filter(Filter(Order, CustomerId = CurrentCustId), GroupDeliveryId > 0), "GroupDeliveryId", "TrackingId")
+            */
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedOrderId, ThisItem.OrderId);
