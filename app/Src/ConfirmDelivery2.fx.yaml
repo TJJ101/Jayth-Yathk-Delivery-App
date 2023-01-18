@@ -1,0 +1,39 @@
+ConfirmDelivery2 As screen:
+
+    HeaderHud5_2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =4
+
+        Rectangle2_13 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =1
+
+        AppTxt2_13 As label:
+            Align: =Align.Center
+            Color: =RGBA(127, 178, 57, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =40
+            Text: ="JaYäpp"
+            Width: =560
+            X: =40
+            Y: =28
+            ZIndex: =2
+
+        BackArrow1_5 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =55
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCover)
+            Width: =55
+            X: =24
+            Y: =35
+            ZIndex: =3
+

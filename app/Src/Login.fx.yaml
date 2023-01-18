@@ -1,4 +1,7 @@
 Login As screen:
+    OnVisible: |-
+        =Set(CurrentCustId, 0);
+        Set(CurrentDelivererId, 0)
 
     LoginTxt1 As label:
         Align: =Align.Center

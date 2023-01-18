@@ -105,7 +105,7 @@ ConfirmDelivery1 As screen:
         Layout: =Layout.Vertical
         OnSelect: |-
             =Set(SelectedOrderId, ThisItem.OrderId);
-            Navigate(ItemDetails,ScreenTransition.CoverRight)
+            Navigate(ConfirmDelivery2,ScreenTransition.CoverRight)
         TemplatePadding: =0
         TemplateSize: =179
         Y: =235

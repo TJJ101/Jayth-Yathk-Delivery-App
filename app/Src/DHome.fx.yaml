@@ -1,5 +1,18 @@
 DHome As screen:
 
+    Label15_1 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =18
+        Text: ="Package assigned to you at the moment"
+        Visible: =If(CountRows(Gallery4.AllItems) = 0, true, false)
+        Width: =560
+        X: =40
+        Y: =598
+        ZIndex: =1
+
     "Gallery4 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =774
         Items: =Filter(Filter(Order, DelivererId = CurrentDelivererId), OrderStatusState <> "Delivered")
@@ -10,7 +23,7 @@ DHome As screen:
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Y: =262
-        ZIndex: =4
+        ZIndex: =5
 
         Title7 As label:
             Height: =Self.Size * 1.8
@@ -93,7 +106,7 @@ DHome As screen:
         Width: =221
         X: =209
         Y: =950
-        ZIndex: =6
+        ZIndex: =7
 
     HeaderHud3 As group:
         Height: =5
@@ -107,7 +120,7 @@ DHome As screen:
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
-            ZIndex: =5
+            ZIndex: =6
 
         AppTxt2_3 As label:
             Align: =Align.Center
@@ -120,7 +133,7 @@ DHome As screen:
             Width: =560
             X: =40
             Y: =28
-            ZIndex: =7
+            ZIndex: =8
 
         HamburgerIcon1_1 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -129,7 +142,7 @@ DHome As screen:
             OnSelect: =Set(HamburgVisible, true)
             X: =17
             Y: =31
-            ZIndex: =8
+            ZIndex: =9
 
     Label4_2 As label:
         Align: =Align.Center
@@ -142,7 +155,7 @@ DHome As screen:
         Width: =560
         X: =39
         Y: =161
-        ZIndex: =9
+        ZIndex: =10
 
     HamburgerPopup1_3 As group:
         Height: =5
@@ -158,7 +171,7 @@ DHome As screen:
             OnSelect: =
             Visible: =HamburgVisible
             Width: =308
-            ZIndex: =10
+            ZIndex: =11
 
         HamburgBackBtn1_3 As arrow.backArrow:
             BorderThickness: =2
@@ -169,7 +182,7 @@ DHome As screen:
             Width: =55
             X: =18
             Y: =26
-            ZIndex: =11
+            ZIndex: =12
 
         LogoutBtn1_3 As icon.Leave:
             Color: =RGBA(0, 0, 0, 1)
@@ -182,7 +195,7 @@ DHome As screen:
             Width: =55
             X: =18
             Y: =1058
-            ZIndex: =12
+            ZIndex: =13
 
         ToAccBtn1_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -200,7 +213,7 @@ DHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =13
+            ZIndex: =14
 
         Icon2_15 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -211,7 +224,7 @@ DHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =196
-            ZIndex: =14
+            ZIndex: =15
 
         Icon2_16 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -222,7 +235,7 @@ DHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =15
+            ZIndex: =16
 
         ToRewardsBtn1_3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -240,7 +253,7 @@ DHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =199
-            ZIndex: =16
+            ZIndex: =17
 
         Icon2_17 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -251,7 +264,7 @@ DHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =269
-            ZIndex: =17
+            ZIndex: =18
 
     BottomHud1_3 As group:
         Height: =5
@@ -277,7 +290,7 @@ DHome As screen:
             Width: =213
             X: =427
             Y: =1036
-            ZIndex: =1
+            ZIndex: =2
 
         ConfirmDeliveryBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -296,7 +309,7 @@ DHome As screen:
             Width: =213
             X: =213
             Y: =1036
-            ZIndex: =2
+            ZIndex: =3
 
         PDeliveryBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -313,5 +326,5 @@ DHome As screen:
             Text: ="Package Delivery"
             Width: =213
             Y: =1036
-            ZIndex: =3
+            ZIndex: =4
 
