@@ -13,6 +13,7 @@ CHistory As screen:
 
         Image6 As image:
             Height: =128
+            Image: =If(LookUp(Reward, RewardId = ThisItem.RewardId, RewardType) = "Discount", discount, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "Shopee", Contains), shopee, If(IsMatch(LookUp(Reward, RewardId = ThisItem.RewardId, RewardName), "ShopBack", Contains), shopeback)))
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
