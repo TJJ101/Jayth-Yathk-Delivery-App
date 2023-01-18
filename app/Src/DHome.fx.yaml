@@ -6,7 +6,7 @@ DHome As screen:
         Height: =70
         Italic: =true
         Size: =18
-        Text: ="Package assigned to you at the moment"
+        Text: ="No package(s) assigned to you at the moment"
         Visible: =If(CountRows(Gallery4.AllItems) = 0, true, false)
         Width: =560
         X: =40

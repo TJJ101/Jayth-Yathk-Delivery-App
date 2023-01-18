@@ -1,6 +1,19 @@
 CHome As screen:
     OnVisible: =Set(HamburgVisible, false)
 
+    Label15_2 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =18
+        Text: ="You currently have no packages"
+        Visible: =If(CountRows(TrackingGallery1.AllItems) = 0, true, false)
+        Width: =560
+        X: =39
+        Y: =617
+        ZIndex: =1
+
     "TrackingGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =801
         Items: |-
@@ -16,7 +29,7 @@ CHome As screen:
         TemplatePadding: =0
         TemplateSize: =179
         Y: =235
-        ZIndex: =4
+        ZIndex: =5
 
         Title1 As label:
             Height: =Self.Size * 1.8
@@ -117,7 +130,7 @@ CHome As screen:
         Width: =221
         X: =209
         Y: =950
-        ZIndex: =9
+        ZIndex: =10
 
     Search1 As group:
         Height: =5
@@ -136,7 +149,7 @@ CHome As screen:
             Width: =425
             X: =107
             Y: =147
-            ZIndex: =6
+            ZIndex: =7
 
         SearchIcon1 As icon.Search:
             Color: =RGBA(0, 0, 0, 0.84)
@@ -145,7 +158,7 @@ CHome As screen:
             Width: =43
             X: =489
             Y: =160
-            ZIndex: =7
+            ZIndex: =8
 
         SearchBarLine1 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -155,7 +168,7 @@ CHome As screen:
             Width: =425
             X: =107
             Y: =207
-            ZIndex: =8
+            ZIndex: =9
 
     BottomHud1 As group:
         Height: =5
@@ -181,7 +194,7 @@ CHome As screen:
             Width: =213
             X: =427
             Y: =1036
-            ZIndex: =1
+            ZIndex: =2
 
         GrpDeliveryBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -200,7 +213,7 @@ CHome As screen:
             Width: =213
             X: =213
             Y: =1036
-            ZIndex: =2
+            ZIndex: =3
 
         TrackingBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -217,7 +230,7 @@ CHome As screen:
             Text: ="Tracking"
             Width: =213
             Y: =1036
-            ZIndex: =3
+            ZIndex: =4
 
     HamburgerPopup1 As group:
         Height: =5
@@ -233,7 +246,7 @@ CHome As screen:
             OnSelect: =
             Visible: =HamburgVisible
             Width: =308
-            ZIndex: =12
+            ZIndex: =13
 
         HamburgBackBtn1 As arrow.backArrow:
             BorderThickness: =2
@@ -244,7 +257,7 @@ CHome As screen:
             Width: =55
             X: =18
             Y: =26
-            ZIndex: =13
+            ZIndex: =14
 
         LogoutBtn1 As icon.Leave:
             Color: =RGBA(0, 0, 0, 1)
@@ -257,7 +270,7 @@ CHome As screen:
             Width: =55
             X: =18
             Y: =1058
-            ZIndex: =14
+            ZIndex: =15
 
         ToAccBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -275,7 +288,7 @@ CHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =15
+            ZIndex: =16
 
         Icon2_6 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -286,7 +299,7 @@ CHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =196
-            ZIndex: =16
+            ZIndex: =17
 
         Icon2_7 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -297,7 +310,7 @@ CHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =17
+            ZIndex: =18
 
         ToRewardsBtn1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -315,7 +328,7 @@ CHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =199
-            ZIndex: =18
+            ZIndex: =19
 
         Icon2_8 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -326,7 +339,7 @@ CHome As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =269
-            ZIndex: =19
+            ZIndex: =20
 
     HeaderHud1 As group:
         Height: =5
@@ -340,7 +353,7 @@ CHome As screen:
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
-            ZIndex: =5
+            ZIndex: =6
 
         AppTxt2_1 As label:
             Align: =Align.Center
@@ -353,7 +366,7 @@ CHome As screen:
             Width: =560
             X: =40
             Y: =28
-            ZIndex: =10
+            ZIndex: =11
 
         HamburgerIcon1 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -363,5 +376,5 @@ CHome As screen:
             Width: =66
             X: =18
             Y: =31
-            ZIndex: =11
+            ZIndex: =12
 

@@ -5,6 +5,9 @@ CHistory As screen:
         Height: =736
         Items: =Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState = "Delivered")
         Layout: =Layout.Vertical
+        OnSelect: |-
+            =Set(SelectedOrderId, ThisItem.OrderId);
+            Navigate(ItemDetails, CoverRight)
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Y: =303
@@ -41,14 +44,14 @@ CHistory As screen:
             ZIndex: =2
 
         Body2 As label:
-            Height: =Self.Size * 4
+            Height: =37
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Delivered On: " & Text(ThisItem.OrderDatetime,"dd/mmm/yyyy")
+                ="Addr: " & ThisItem.DeliveryAddress
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -77,6 +80,21 @@ CHistory As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Body2_1 As label:
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Delivered On: " & Text(ThisItem.OrderDatetime,"dd/mmm/yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =122
+            ZIndex: =6
 
     BottomHud1_2 As group:
         Height: =5

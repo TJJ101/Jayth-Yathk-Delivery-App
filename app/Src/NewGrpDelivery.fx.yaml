@@ -93,6 +93,7 @@ NewGrpDelivery As screen:
             CheckmarkFill: =RGBA(152, 208, 70, 1)
             Color: =RGBA(99, 139, 44, 1)
             Height: =60
+            OnCheck: =true
             OnSelect: =Select(Parent)
             Size: =21
             Text: =
@@ -151,9 +152,10 @@ NewGrpDelivery As screen:
         Fill: =RGBA(54, 176, 75, 1)
         Height: =70
         OnSelect: |-
-            =ClearCollect(NewGrpDeliveryCol, {OrderId: Blank()}, {OrderStatusDateTime: Blank()});
+            =ClearCollect(NewGrpDeliveryCol, {OrderId: Blank(), OrderStatusDateTime: Blank()});
+            Clear(NewGrpDeliveryCol);
             ForAll(NewGrpDeliveryGallery1.AllItems, 
-                If(ThisRecord.Checkbox1.Value=true, Collect(NewGrpDeliveryCol, {OrderId: ThisRecord.OrderId}))
+                If(ThisRecord.Checkbox1.Value=true, Collect(NewGrpDeliveryCol, {OrderId: ThisRecord.OrderId, OrderStatusDateTime: ThisRecord.OrderStatusDateTime}))
             );
             If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
                 ForAll(NewGrpDeliveryCol, 
