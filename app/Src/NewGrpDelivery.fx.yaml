@@ -1,0 +1,178 @@
+NewGrpDelivery As screen:
+
+    Label15 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =18
+        Text: ="No Order Applicable for Group Delivery"
+        Visible: =If(CountRows(NewGrpDeliveryGallery1.AllItems) = 0, true, false)
+        Width: =560
+        X: =40
+        Y: =595
+        ZIndex: =1
+
+    "NewGrpDeliveryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =1009
+        Items: =Filter(Filter(Order, CustomerId = CurrentCustId), And(OrderStatusState = "Waiting parcel from merchant" Or OrderStatusState = "Processing parcel from merchant", GroupDeliveryId = 0))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Y: =126
+        ZIndex: =3
+
+        Title9 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tracking ID: " & ThisItem.TrackingId
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle8 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Addr: " & ThisItem.DeliveryAddress
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title9.Y + Title9.Height + 2
+            ZIndex: =2
+
+        Body6 As label:
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="State: "& ThisItem.OrderStatusState
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle8.Y + Subtitle8.Height + 4
+            ZIndex: =3
+
+        Separator9 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label8 As label:
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            PaddingTop: =0
+            Size: =16
+            Text: |-
+                ="Estimated Arrival: " & Text(ThisItem.OrderStatusDateTime, "dd/mmm/yyyy")
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =123
+            ZIndex: =6
+
+        Checkbox1 As checkbox:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            CheckboxBorderColor: =RGBA(99, 139, 44, 1)
+            CheckmarkFill: =RGBA(152, 208, 70, 1)
+            Color: =RGBA(99, 139, 44, 1)
+            Height: =60
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 20
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =7
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =4
+
+        Rectangle2_12 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =2
+
+        AppTxt2_11 As label:
+            Align: =Align.Center
+            Color: =RGBA(127, 178, 57, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =40
+            Text: ="JaYäpp"
+            Width: =560
+            X: =40
+            Y: =28
+            ZIndex: =4
+
+        BackArrow1_4 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =55
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCover)
+            Width: =55
+            X: =24
+            Y: =35
+            ZIndex: =5
+
+    HelpIcon As icon.Help:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =52
+        Icon: =Icon.Help
+        Width: =52
+        X: =546
+        Y: =1047
+        ZIndex: =6
+
+    Button4 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =70
+        OnSelect: |-
+            =ClearCollect(NewGrpDeliveryCol, {OrderId: Blank()}, {OrderStatusDateTime: Blank()});
+            ForAll(NewGrpDeliveryGallery1.AllItems, 
+                If(ThisRecord.Checkbox1.Value=true, Collect(NewGrpDeliveryCol, {OrderId: ThisRecord.OrderId}))
+            );
+            If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
+                ForAll(NewGrpDeliveryCol, 
+                    Patch(Order, LookUp(Order, OrderId = ThisRecord.OrderId), 
+                        {GroupDeliveryId:Max(Order, GroupDeliveryId)+1},
+                        {OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime)}
+                    )
+                );
+                Notify("Delivery Successfully Grouped", Success, 1000);
+                Back()
+            )
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =18
+        Text: ="New Group Delivery"
+        Width: =280
+        X: =180
+        Y: =1001
+        ZIndex: =7
+

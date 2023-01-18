@@ -118,6 +118,7 @@
     "CHome",
     "CGrpDelivery",
     "CGrpDeliveryDetails",
+    "NewGrpDelivery",
     "ItemDetails",
     "Accounts",
     "CRewards",

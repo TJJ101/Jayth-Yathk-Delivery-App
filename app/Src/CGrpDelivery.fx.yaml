@@ -19,7 +19,8 @@ CGrpDelivery As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, TrackingId)
+            Text: |-
+                ="Tracking ID: " & LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, TrackingId)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -33,7 +34,8 @@ CGrpDelivery As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, DeliveryAddress)
+            Text: |-
+                ="Addr: " & LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, DeliveryAddress)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
