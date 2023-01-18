@@ -1,5 +1,90 @@
 CHistory As screen:
-    OnVisible: =Set(HistoryChoice, "Delivery")
+    OnVisible: =
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+        Height: =736
+        Items: =Filter(PurchaseTransaction, CustomerId = CurrentCustId)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Visible: =If(HistoryChoice = "Delivery", false, true)
+        Y: =303
+        ZIndex: =1
+
+        Image6 As image:
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title5 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardName)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image6.Width - 104
+            X: =Image6.X + Image6.Width + 16
+            Y: =20
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =LookUp(Reward, RewardId = ThisItem.RewardId, RewardDesc)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =160
+            Y: =68
+            ZIndex: =3
+
+        Body7 As label:
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Redeemed On: " & Text(ThisItem.TranscationDateTime, "dd/mmm/yyyy")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Subtitle4.Width
+            X: =Subtitle4.X
+            Y: =114
+            ZIndex: =4
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator5 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
 
     "HistoryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =736
@@ -10,6 +95,7 @@ CHistory As screen:
             Navigate(ItemDetails, CoverRight)
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
+        Visible: =If(HistoryChoice = "Delivery", true, false)
         Y: =303
         ZIndex: =4
 
