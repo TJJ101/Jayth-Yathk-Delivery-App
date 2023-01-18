@@ -83,6 +83,7 @@ CRewards As screen:
             Font: =Font.Georgia
             FontWeight: =FontWeight.Normal
             Height: =100
+            OnSelect: =Navigate(CHistory, Pop)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -120,6 +121,7 @@ CRewards As screen:
             Font: =Font.Georgia
             FontWeight: =FontWeight.Normal
             Height: =100
+            OnSelect: =Navigate(CHome, Pop)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

@@ -1,18 +1,18 @@
-CGrpDelivery As screen:
+CGrpDeliveryDetails As screen:
 
-    "GrpDeliveryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+    "GrpDeliveryGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =763
-        Items: =GroupBy(Filter(Filter(Order, CustomerId = CurrentCustId), GroupDeliveryId > 0), "GroupDeliveryId", "TrackingId")
+        Items: =Filter(Filter(Order, CustomerId = CurrentCustId), GroupDeliveryId > 0)
         Layout: =Layout.Vertical
         OnSelect: |-
-            =Set(SelectedGrpDId, ThisItem.GroupDeliveryId);
-            Navigate(CGrpDeliveryDetails, Pop)
+            =Set(SelectedOrderId, ThisItem.OrderId);
+            Navigate(ItemDetails, Pop)
         TemplatePadding: =0
         TemplateSize: =139
-        Y: =273
-        ZIndex: =1
+        Y: =293
+        ZIndex: =4
 
-        Title6 As label:
+        Title6_1 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -26,7 +26,7 @@ CGrpDelivery As screen:
             Y: =16
             ZIndex: =1
 
-        Subtitle5 As label:
+        Subtitle5_1 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -37,24 +37,24 @@ CGrpDelivery As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Title6.Y + Title6.Height + 2
+            Y: =Title6_1.Y + Title6_1.Height + 2
             ZIndex: =2
 
-        Body5 As label:
+        Body5_1 As label:
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Estimated Arrival: " & Text(LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, OrderStatusDateTime), "dd/mmm/yyyy")
+                ="Status: " & LookUp(Order, GroupDeliveryId = ThisItem.GroupDeliveryId, OrderStatus)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Subtitle5.Y + Subtitle5.Height + 4
+            Y: =Subtitle5_1.Y + Subtitle5_1.Height + 4
             ZIndex: =3
 
-        NextArrow6 As icon.ChevronRight:
+        NextArrow6_1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
@@ -70,34 +70,21 @@ CGrpDelivery As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator7 As rectangle:
+        Separator7_1 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-    Label4_3 As label:
-        Align: =Align.Center
-        Font: =Font.Georgia
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =30
-        Text: ="Group Delivery"
-        Underline: =true
-        Width: =560
-        X: =39
-        Y: =161
-        ZIndex: =6
-
-    BottomHud2 As group:
+    BottomHud2_1 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =7
+        ZIndex: =4
 
-        HistoryBtn2 As button:
+        HistoryBtn2_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(235, 235, 235, 1)
@@ -114,9 +101,9 @@ CGrpDelivery As screen:
             Width: =213
             X: =427
             Y: =1036
-            ZIndex: =2
+            ZIndex: =1
 
-        GrpDeliveryBtn2 As button:
+        GrpDeliveryBtn2_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(235, 235, 235, 1)
@@ -132,9 +119,9 @@ CGrpDelivery As screen:
             Width: =213
             X: =213
             Y: =1036
-            ZIndex: =3
+            ZIndex: =2
 
-        TrackingBtn2 As button:
+        TrackingBtn2_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(235, 235, 235, 1)
@@ -150,23 +137,37 @@ CGrpDelivery As screen:
             Text: ="Tracking"
             Width: =213
             Y: =1036
-            ZIndex: =4
+            ZIndex: =3
 
-    HeaderHud2 As group:
+    Label4_4 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Bold
+        Height: =132
+        Size: =30
+        Text: |-
+            ="Group Delivery On: " & Char(13) & Text(LookUp(Order, GroupDeliveryId = SelectedGrpDId, OrderStatusDateTime), "dd/mmm/yyyy")
+        Underline: =true
+        Width: =560
+        X: =39
+        Y: =161
+        ZIndex: =5
+
+    HeaderHud2_1 As group:
         Height: =5
         Width: =5
         X: =60
-        Y: =60
+        Y: =20
         ZIndex: =9
 
-        Rectangle2_2 As rectangle:
+        Rectangle2_11 As rectangle:
             BorderColor: =RGBA(152, 208, 70, 1)
             Fill: =RGBA(56, 89, 12, 1)
             Height: =126
             Width: =640
-            ZIndex: =1
+            ZIndex: =6
 
-        AppTxt2_2 As label:
+        AppTxt2_10 As label:
             Align: =Align.Center
             Color: =RGBA(127, 178, 57, 1)
             Font: =Font.Georgia
@@ -177,14 +178,14 @@ CGrpDelivery As screen:
             Width: =560
             X: =40
             Y: =28
-            ZIndex: =5
+            ZIndex: =7
 
-        HamburgerIcon2 As icon.Hamburger:
+        HamburgerIcon2_1 As icon.Hamburger:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(214, 223, 238, 1)
             Icon: =Icon.Hamburger
             OnSelect: =
             X: =17
             Y: =31
-            ZIndex: =7
+            ZIndex: =8
 

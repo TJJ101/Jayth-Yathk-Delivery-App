@@ -11,6 +11,7 @@
       "CustomerId": "CustomerId",
       "DelivererId": "DelivererId",
       "DeliveryAddress": "DeliveryAddress",
+      "GroupDeliveryId": "GroupDeliveryId",
       "OrderDatetime": "OrderDatetime",
       "OrderId": "OrderId",
       "OrderPrice": "OrderPrice",

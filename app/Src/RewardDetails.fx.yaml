@@ -209,3 +209,18 @@ RewardDetails As screen:
         Y: =943
         ZIndex: =6
 
+    Label6 As label:
+        Align: =Align.Center
+        Height: =31
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =12
+        Text: |-
+            ="Current Points: " & LookUp(customer, CustomerId = CurrentCustId, Points)
+        Width: =280
+        X: =180
+        Y: =1013
+        ZIndex: =7
+

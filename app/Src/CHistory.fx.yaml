@@ -1,12 +1,13 @@
 CHistory As screen:
+    OnVisible: =Set(HistoryChoice, "Delivery")
 
     "HistoryGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Height: =783
+        Height: =736
         Items: =Filter(Filter(Order, CustomerId = CurrentCustId), OrderStatusState = "Delivered")
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
-        Y: =256
+        Y: =303
         ZIndex: =4
 
         Title4 As label:
@@ -146,7 +147,7 @@ CHistory As screen:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =30
-        Text: ="Delivery History"
+        Text: =HistoryChoice & " History"
         Underline: =true
         Width: =560
         X: =39
@@ -189,6 +190,22 @@ CHistory As screen:
             X: =18
             Y: =31
             ZIndex: =7
+
+    OwnToggle1_1 As toggleSwitch:
+        FalseFill: =RGBA(187, 221, 140, 1)
+        FalseText: =
+        Font: =Font.Georgia
+        Height: =32
+        OnCheck: =Set(HistoryChoice, "Rewards")
+        OnUncheck: =Set(HistoryChoice, "Delivery")
+        Size: =18
+        TextPosition: =TextPosition.Left
+        TrueFill: =RGBA(99, 139, 44, 1)
+        TrueText: =
+        Width: =80
+        X: =536
+        Y: =237
+        ZIndex: =17
 
     HamburgerPopup1_2 As group:
         Height: =5
