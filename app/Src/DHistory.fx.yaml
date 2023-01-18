@@ -268,7 +268,7 @@ DHistory As screen:
             Font: =Font.Georgia
             FontWeight: =FontWeight.Normal
             Height: =100
-            OnSelect: =Navigate(CGrpDelivery, Transition.Pop)
+            OnSelect: =Navigate(ConfirmDelivery1, Transition.Pop)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0

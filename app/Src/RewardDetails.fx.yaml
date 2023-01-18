@@ -179,3 +179,33 @@ RewardDetails As screen:
             Y: =35
             ZIndex: =3
 
+    RedeemBtn1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =70
+        OnSelect: |-
+            =If(LookUp(customer, CustomerId = CurrentCustId, Points) >= LookUp(Reward, RewardId = SelectedRewardId, PointsReq), 
+                Patch(PurchaseTransaction, Defaults(PurchaseTransaction), 
+                    {CustomerId:CurrentCustId},
+                    {RewardId:LookUp(Reward, RewardId = SelectedRewardId, RewardId)},
+                    {PurchaseTransactionId:Last(PurchaseTransaction).PurchaseTransactionId+1},
+                    {TranscationDateTime:Now()});
+                Patch(customer, LookUp(customer, CustomerId = CurrentCustId),
+                    {Points:LookUp(customer, CustomerId = CurrentCustId, Points) - LookUp(Reward, RewardId = SelectedRewardId, PointsReq)});
+                Notify("Successfully redeemed " & LookUp(Reward, RewardId = SelectedRewardId, RewardName), Success, 1000);
+                Back()
+            
+                ,
+            
+                Notify("Insufficent Points", Error, 1000)
+            )
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =24
+        Text: ="Redeem"
+        Width: =280
+        X: =180
+        Y: =943
+        ZIndex: =6
+

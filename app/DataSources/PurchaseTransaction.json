@@ -10,7 +10,8 @@
       "__PowerAppsId__": "Row id",
       "CustomerId": "CustomerId",
       "PurchaseTransactionId": "PurchaseTransactionId",
-      "RewardId": "RewardId"
+      "RewardId": "RewardId",
+      "TranscationDateTime": "TranscationDateTime"
     },
     "DatasetName": "b!CR0kFybviUyqwROaX5utw__Ii6mlnzJEss5Fu_VrVSon5fVgnk0lSavzpjs8g2jc.015UP4GZ2ZPZA26YODUZCKW3J65BJXGIP6",
     "EncodeDataset": true,
