@@ -77,7 +77,7 @@ Login As screen:
                         If(
                             LookUp(deliverer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Set(HamburgVisible, false);
-                            Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId));
+                            Set(CurrentDelivererId, LookUp(deliverer, Username = UNameEmailInput1.Text, DelivererId));
                             Navigate(DHome, Pop);
                             Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify( "Invalid Password", Warning, 1500)

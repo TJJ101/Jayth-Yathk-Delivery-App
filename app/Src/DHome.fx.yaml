@@ -20,7 +20,7 @@ DHome As screen:
             =Set(SelectedOrderId, ThisItem.OrderId);
             Navigate(DDetails)
         TemplatePadding: =0
-        TemplateSize: =Min(168, Self.Height - 60)
+        TemplateSize: =149
         Y: =262
         ZIndex: =6
 
@@ -55,13 +55,14 @@ DHome As screen:
             ZIndex: =2
 
         Body4 As label:
-            Height: =Self.Size * 4
+            Height: =47
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.OrderStatusComments
+            Text: |-
+                ="Comments: " & ThisItem.OrderStatusComments
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

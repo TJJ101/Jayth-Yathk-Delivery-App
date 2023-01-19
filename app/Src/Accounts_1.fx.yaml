@@ -39,7 +39,7 @@ Accounts_1 As screen:
         FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =30
-        Text: =LookUp(customer, CustomerId = CurrentCustId, Username)
+        Text: =LookUp(deliverer, DelivererId = CurrentDelivererId, Username)
         Width: =369
         X: =135
         Y: =389
