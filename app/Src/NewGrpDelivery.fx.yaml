@@ -163,8 +163,11 @@ NewGrpDelivery As screen:
             If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
                 ForAll(NewGrpDeliveryCol, 
                     Patch(Order, LookUp(Order, OrderId = ThisRecord.OrderId), 
-                        {GroupDeliveryId:Max(Order, GroupDeliveryId)+1},
-                        {OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime)}
+                        {
+                            GroupDeliveryId:Max(Order, GroupDeliveryId)+1,
+                            OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
+                            TrackingId:LookUp(Table10, Column1 = RandBetween(2, 8), GDTrackingId)
+                        }
                     )
                 );
                 Notify("Delivery Successfully Grouped", Success, 1000);

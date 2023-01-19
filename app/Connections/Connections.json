@@ -144,13 +144,17 @@
           },
           "Reward": {
             "tableName": "Reward"
+          },
+          "Table10": {
+            "tableName": "Table10"
           }
         }
       }
     },
     "dataSources": [
       "Reward",
-      "PurchaseTransaction8"
+      "PurchaseTransaction8",
+      "Table10"
     ],
     "dependencies": {
       "fileSource": "17a860a2-95f8-4c6c-89cf-2776ecef0a82"

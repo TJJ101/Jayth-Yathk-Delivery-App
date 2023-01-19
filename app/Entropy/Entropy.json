@@ -432,7 +432,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/19/2023 18:57:42",
+  "HeaderLastSavedDateTimeUTC": "01/19/2023 19:04:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "17a860a2-95f8-4c6c-89cf-2776ecef0a82": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/075af7f9ab314937a699f21f6ee779de\"",
@@ -472,13 +472,14 @@
     "CustomGallerySample": 1,
     "deliverer": 7,
     "DropDownSample": 6,
-    "NewGrpDeliveryCol": 11,
+    "NewGrpDeliveryCol": 12,
     "Order": 4,
     "OrderDetails": 5,
     "PurchaseTransaction": 2,
     "PurchaseTransaction8": 10,
     "Reward": 8,
-    "RewardTransaction": 3
+    "RewardTransaction": 3,
+    "Table10": 11
   },
   "OrderGroupControls": {
     "AddMediaWithImage1": {
@@ -1636,7 +1637,7 @@
       "group": 42,
       "icon": 77,
       "image": 10,
-      "label": 123,
+      "label": 124,
       "rectangle": 41,
       "screen": 18,
       "text": 8,

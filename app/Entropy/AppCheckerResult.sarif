@@ -3704,6 +3704,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.RanGrpTrackingId"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.RanGrpTrackingId",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "RanGrpTrackingId",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ConfirmDelivery1.TrackingGallery1_1.Items"
                 }
               ],
@@ -3727,7 +3757,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         }
       ],
       "tool": {
@@ -3801,6 +3831,23 @@
                 "level": "Low",
                 "primaryCategory": "accessibility",
                 "whyFix": "Users won't get confirmation of their actions if the state of the control isn't showing."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             },
             {

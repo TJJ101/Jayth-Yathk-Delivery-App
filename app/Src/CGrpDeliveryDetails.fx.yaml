@@ -71,6 +71,7 @@ CGrpDeliveryDetails As screen:
         ZIndex: =10
 
     Label16 As label:
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: |-
@@ -81,6 +82,7 @@ CGrpDeliveryDetails As screen:
         ZIndex: =11
 
     Label16_1 As label:
+        FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =21
         Text: |-
