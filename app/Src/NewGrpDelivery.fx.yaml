@@ -143,7 +143,9 @@ NewGrpDelivery As screen:
         Color: =RGBA(0, 0, 0, 1)
         Height: =52
         Icon: =Icon.Help
-        OnSelect: =Set(HelpShow, !HelpShow)
+        OnSelect: |-
+            =Set(HelpShow, !HelpShow);
+            Set(ShowNextHelp, false)
         Width: =52
         X: =546
         Y: =1047
@@ -179,12 +181,12 @@ NewGrpDelivery As screen:
         Y: =1001
         ZIndex: =7
 
-    Group1 As group:
+    Group4 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
-        ZIndex: =10
+        ZIndex: =14
 
         Rectangle1 As rectangle:
             Fill: =RGBA(230, 230, 230, 0.5)
@@ -195,10 +197,44 @@ NewGrpDelivery As screen:
             ZIndex: =8
 
         Rectangle3 As rectangle:
-            Height: =224
+            BorderColor: =RGBA(99, 139, 44, 1)
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =299
             Visible: =HelpShow
-            Width: =376
-            X: =132
-            Y: =518
+            Width: =421
+            X: =109
+            Y: =481
             ZIndex: =9
+
+        Icon1 As icon.Cancel:
+            Color: =RGBA(209, 232, 178, 1)
+            Height: =42
+            HoverColor: =RGBA(255, 0, 0, 1)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(HelpShow, false)
+            Width: =44
+            X: =120
+            Y: =497
+            ZIndex: =10
+
+        Label21 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =152
+            Size: =21
+            Text: ="Select 2 or more orders to make a new Group Delivery!"
+            Width: =421
+            X: =109
+            Y: =551
+            ZIndex: =11
+
+        Icon2 As icon.ArrowRight:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =42
+            Icon: =If(ShowNextHelp = false, Icon.ArrowRight, Icon.ArrowLeft)
+            OnSelect: =If(ShowNextHelp = false, Set(ShowNextHelp, true), Set(ShowNextHelp, false))
+            Width: =42
+            X: =470
+            Y: =723
+            ZIndex: =13
 
