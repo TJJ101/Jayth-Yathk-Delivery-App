@@ -1,4 +1,5 @@
 NewGrpDelivery As screen:
+    OnVisible: =Set(HelpShow, false)
 
     Label15 As label:
         Align: =Align.Center
@@ -142,6 +143,7 @@ NewGrpDelivery As screen:
         Color: =RGBA(0, 0, 0, 1)
         Height: =52
         Icon: =Icon.Help
+        OnSelect: =Set(HelpShow, !HelpShow)
         Width: =52
         X: =546
         Y: =1047
@@ -176,4 +178,26 @@ NewGrpDelivery As screen:
         X: =180
         Y: =1001
         ZIndex: =7
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =10
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(230, 230, 230, 0.5)
+            Height: =1135
+            Visible: =HelpShow
+            Width: =640
+            ZIndex: =8
+
+        Rectangle3 As rectangle:
+            Height: =224
+            Visible: =HelpShow
+            Width: =376
+            X: =132
+            Y: =518
+            ZIndex: =9
 
