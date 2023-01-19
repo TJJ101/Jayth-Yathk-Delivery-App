@@ -1,5 +1,16 @@
 ConfirmDelivery2 As screen:
 
+    Label19 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =30
+        Text: =LookUp(Order, OrderId = SelectedOrderId, TrackingId)
+        Width: =560
+        X: =40
+        Y: =156
+        ZIndex: =4
+
     HeaderHud5_2 As group:
         Height: =5
         Width: =5
@@ -36,4 +47,10 @@ ConfirmDelivery2 As screen:
             X: =24
             Y: =35
             ZIndex: =3
+
+    Camera1 As camera:
+        Camera: =0
+        X: =120
+        Y: =280
+        ZIndex: =5
 
