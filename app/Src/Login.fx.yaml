@@ -32,9 +32,10 @@ Login As screen:
                         UNameEmailInput1.Text in customer.Email,
                         If(
                             LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId));
+                            Set(HistoryChoice, "Delivery");
                             Navigate(CHome, Pop);
-                            Notify("Welcome back " & LookUp(customer, Password = PasswordInput1.Text, Username), Success, 1500);
-                            Set(CurrentCustId, LookUp( customer, Email = UNameEmailInput1.Text, CustomerId)),
+                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify("Invalid Password",Error,1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
@@ -43,9 +44,10 @@ Login As screen:
                         UNameEmailInput1.Text in customer.Username,
                         If(
                             LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId));
+                            Set(HistoryChoice, "Delivery");
                             Navigate(CHome, Pop);
-                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
-                            Set( CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId)),
+                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify( "Invalid Password", Warning, 1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
