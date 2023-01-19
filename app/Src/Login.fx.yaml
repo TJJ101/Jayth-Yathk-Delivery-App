@@ -34,6 +34,7 @@ Login As screen:
                             LookUp(customer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId));
                             Set(HistoryChoice, "Delivery");
+                            Set(HamburgVisible, false);
                             Navigate(CHome, Pop);
                             Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify("Invalid Password",Error,1500)
@@ -46,6 +47,7 @@ Login As screen:
                             LookUp(customer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
                             Set(CurrentCustId, LookUp(customer, Username = UNameEmailInput1.Text, CustomerId));
                             Set(HistoryChoice, "Delivery");
+                            Set(HamburgVisible, false);
                             Navigate(CHome, Pop);
                             Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify( "Invalid Password", Warning, 1500)
@@ -62,9 +64,10 @@ Login As screen:
                         UNameEmailInput1.Text in deliverer.Email,
                         If(
                             LookUp(deliverer, Email = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Set(HamburgVisible, false);
+                            Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId));
                             Navigate(DHome, Pop);
-                            Notify("Welcome back " & LookUp(deliverer, Password = PasswordInput1.Text, Username), Success, 1500);
-                            Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId)),
+                            Notify("Welcome back " & LookUp(deliverer, Password = PasswordInput1.Text, Username), Success, 1500),
                             Notify("Invalid Password",Error,1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)
@@ -73,9 +76,10 @@ Login As screen:
                         UNameEmailInput1.Text in deliverer.Username,
                         If(
                             LookUp(deliverer, Username = UNameEmailInput1.Text, Password = PasswordInput1.Text),
+                            Set(HamburgVisible, false);
+                            Set(CurrentDelivererId, LookUp(deliverer, Email = UNameEmailInput1.Text, DelivererId));
                             Navigate(DHome, Pop);
-                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500);
-                            Set(CurrentDelivererId, LookUp(deliverer, Username = UNameEmailInput1.Text, DelivererId)),
+                            Notify( "Welcome back " & UNameEmailInput1.Text, Success, 1500),
                             Notify( "Invalid Password", Warning, 1500)
                         ),
                         Notify("Invalid Login Details", Error, 1500)

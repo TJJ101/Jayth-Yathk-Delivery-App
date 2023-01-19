@@ -189,6 +189,7 @@ NewGrpDelivery As screen:
         Rectangle1 As rectangle:
             Fill: =RGBA(230, 230, 230, 0.5)
             Height: =1135
+            OnSelect: =Set(HelpShow, false)
             Visible: =HelpShow
             Width: =640
             ZIndex: =8
