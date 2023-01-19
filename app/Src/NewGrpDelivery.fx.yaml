@@ -181,12 +181,12 @@ NewGrpDelivery As screen:
         Y: =1001
         ZIndex: =7
 
-    Group4 As group:
+    Group5 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
-        ZIndex: =14
+        ZIndex: =16
 
         Rectangle1 As rectangle:
             Fill: =RGBA(230, 230, 230, 0.5)
@@ -212,6 +212,7 @@ NewGrpDelivery As screen:
             HoverColor: =RGBA(255, 0, 0, 1)
             Icon: =Icon.Cancel
             OnSelect: =Set(HelpShow, false)
+            Visible: =HelpShow
             Width: =44
             X: =120
             Y: =497
@@ -221,11 +222,12 @@ NewGrpDelivery As screen:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Height: =152
-            Size: =21
-            Text: ="Select 2 or more orders to make a new Group Delivery!"
-            Width: =421
-            X: =109
-            Y: =551
+            Size: =18
+            Text: =If(ShowNextHelp = false, "Select 2 or more orders to make a new Group Delivery!", "Only orders that haven't been sent out for delivery are applicable for Group Delivery!")
+            Visible: =HelpShow
+            Width: =392
+            X: =124
+            Y: =554
             ZIndex: =11
 
         Icon2 As icon.ArrowRight:
@@ -233,8 +235,31 @@ NewGrpDelivery As screen:
             Height: =42
             Icon: =If(ShowNextHelp = false, Icon.ArrowRight, Icon.ArrowLeft)
             OnSelect: =If(ShowNextHelp = false, Set(ShowNextHelp, true), Set(ShowNextHelp, false))
+            Visible: =HelpShow
             Width: =42
             X: =470
             Y: =723
             ZIndex: =13
+
+        Icon3 As icon.HorizontalLine:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            BorderThickness: =1
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Visible: =HelpShow
+            Width: =377
+            X: =131
+            Y: =554
+            ZIndex: =14
+
+        Icon3_1 As icon.HorizontalLine:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            BorderThickness: =1
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Visible: =HelpShow
+            Width: =377
+            X: =131
+            Y: =706
+            ZIndex: =15
 
