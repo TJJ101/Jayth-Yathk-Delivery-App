@@ -39,7 +39,7 @@ Accounts As screen:
         FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =30
-        Text: =LookUp(customer, CustomerId = CurrentCustId, Username)
+        Text: =If(CurrentCustId = 0, LookUp(deliverer, DelivererId = CurrentDelivererId, Username), LookUp(customer, CustomerId = CurrentCustId, Username))
         Width: =369
         X: =135
         Y: =389
@@ -50,7 +50,7 @@ Accounts As screen:
         Height: =70
         Size: =21
         Text: |-
-            ="Points: " & LookUp(customer, CustomerId = CurrentCustId, Points)
+            ="Points: " & If(CurrentCustId = 0, LookUp(deliverer, DelivererId = CurrentDelivererId, Points), LookUp(customer, CustomerId = CurrentCustId, Points))
         Width: =477
         X: =81
         Y: =656
@@ -71,7 +71,7 @@ Accounts As screen:
         Height: =70
         Size: =21
         Text: |-
-            ="Email: " & LookUp(customer, CustomerId = CurrentCustId, Email)
+            ="Email: " & If(CurrentCustId = 0, LookUp(deliverer, DelivererId = CurrentDelivererId, Email), LookUp(customer, CustomerId = CurrentCustId, Email))
         Width: =477
         X: =81
         Y: =516
@@ -82,7 +82,7 @@ Accounts As screen:
         Height: =70
         Size: =21
         Text: |-
-            ="Phone Num: " & LookUp(customer, CustomerId = CurrentCustId, MobileNo)
+            ="Phone Num: " & If(CurrentCustId = 0, LookUp(deliverer, DelivererId = CurrentDelivererId, MobileNo), LookUp(customer, CustomerId = CurrentCustId, MobileNo))
         Width: =477
         X: =81
         Y: =586

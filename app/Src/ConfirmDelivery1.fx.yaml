@@ -312,7 +312,7 @@ ConfirmDelivery1 As screen:
             HoverColor: =RGBA(0, 0, 0, 100)
             HoverFill: =RGBA(209, 232, 178, 100)
             OnSelect: |-
-                =Navigate(Accounts_1, ScreenTransition.Fade);
+                =Navigate(Accounts, ScreenTransition.Fade);
                 Set(HamburgVisible, false);
             Size: =20
             Text: ="Account"

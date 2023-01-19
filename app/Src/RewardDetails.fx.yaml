@@ -218,7 +218,7 @@ RewardDetails As screen:
         PaddingTop: =0
         Size: =12
         Text: |-
-            ="Current Points: " & LookUp(customer, CustomerId = CurrentCustId, Points)
+            ="Current Points: " & If(CurrentCustId = 0, LookUp(deliverer, DelivererId = CurrentDelivererId, Points), LookUp(customer, CustomerId = CurrentCustId, Points))
         Width: =280
         X: =180
         Y: =1013
