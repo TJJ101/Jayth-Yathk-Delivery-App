@@ -90,6 +90,7 @@ ConfirmDelivery2 As screen:
     Camera4 As camera:
         Camera: =1
         Height: =364
+        Visible: =If(TakePhoto = true, true, false)
         Width: =568
         X: =36
         Y: =322
