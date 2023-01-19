@@ -98,7 +98,7 @@
     "Id": "3f7e582c-61a5-49df-bdb0-01d8d18f618e",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "JaY%25c3%25a4pp.msapp",
+    "Name": "JaYäpp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
@@ -130,6 +130,7 @@
     "DHistory",
     "DDetails",
     "ConfirmDelivery1",
-    "ConfirmDelivery2"
+    "ConfirmDelivery2",
+    "ConfirmDelivery3"
   ]
 }

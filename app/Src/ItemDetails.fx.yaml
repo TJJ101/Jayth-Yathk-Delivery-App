@@ -39,7 +39,7 @@ ItemDetails As screen:
             =If(LookUp(Order, OrderId = SelectedOrderId, OrderStatusState) <> "Delivered", "Estimated Delivery: ", "Delivered On: ") & Text(LookUp(Order, OrderId = SelectedOrderId, OrderStatusDateTime), "dd/mmm/yyyy")
         Width: =560
         X: =40
-        Y: =551
+        Y: =566
         ZIndex: =7
 
     Image4 As image:
@@ -51,6 +51,7 @@ ItemDetails As screen:
         ZIndex: =8
 
     Label18 As label:
+        FontWeight: =FontWeight.Semibold
         Height: =70
         PaddingLeft: =10
         Size: =21
@@ -69,6 +70,18 @@ ItemDetails As screen:
             ="Cost: $" &  LookUp(Order, OrderId = SelectedOrderId, OrderPrice)
         Width: =560
         X: =40
-        Y: =691
+        Y: =775
         ZIndex: =10
+
+    Label18_2 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        PaddingLeft: =10
+        Size: =21
+        Text: |-
+            ="Curent Status: " &  LookUp(Order, OrderId = SelectedOrderId, OrderStatusState)
+        Width: =560
+        X: =40
+        Y: =691
+        ZIndex: =11
 

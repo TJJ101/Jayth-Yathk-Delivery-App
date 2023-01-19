@@ -92,8 +92,9 @@ ConfirmDelivery2 As screen:
         ZIndex: =8
 
     Camera4 As camera:
-        Camera: =1
+        Camera: =2
         Height: =364
+        OnSelect: =Set(PhotoTaken, true)
         Visible: =If(TakePhoto = true, If(PhotoTaken = true, false, true), false)
         Width: =568
         X: =36
@@ -120,4 +121,37 @@ ConfirmDelivery2 As screen:
         X: =40
         Y: =322
         ZIndex: =11
+
+    Button1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =51
+        OnSelect: =Set(PhotoTaken, false)
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =18
+        Text: ="Button"
+        Visible: =If(TakePhoto = true, If(PhotoTaken = true, true, false), false)
+        Width: =191
+        X: =224
+        Y: =815
+        ZIndex: =12
+
+    Button2 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =70
+        OnSelect: |-
+            =If(TakePhoto = true, Set(AddPhoto, Camera4.Photo), Set(AddPhoto, UploadedImage1.Image));
+            If(Or(IsBlank(AddPhoto), AddPhoto = SampleImage), Notify("Please Add image of delivery to confirm delivery", Warning, 1000), Navigate(ConfirmDelivery3, Pop))
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="Next"
+        Width: =280
+        X: =180
+        Y: =1009
+        ZIndex: =13
 
