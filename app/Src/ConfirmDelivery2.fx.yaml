@@ -8,7 +8,7 @@ ConfirmDelivery2 As screen:
         Text: =LookUp(Order, OrderId = SelectedOrderId, TrackingId)
         Width: =560
         X: =40
-        Y: =156
+        Y: =158
         ZIndex: =4
 
     HeaderHud5_2 As group:
@@ -59,6 +59,7 @@ ConfirmDelivery2 As screen:
             Height: =AddMediaButton1.Height
             Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
             ImagePosition: =ImagePosition.Fill
+            Visible: =If(TakePhoto = false, true, false)
             Width: =AddMediaButton1.Width
             X: =AddMediaButton1.X
             Y: =AddMediaButton1.Y
@@ -67,14 +68,30 @@ ConfirmDelivery2 As screen:
         AddMediaButton1 As addMedia:
             Height: =364
             Size: =25
+            Visible: =If(TakePhoto = false, true, false)
             Width: =568
-            X: =32
-            Y: =242
+            X: =36
+            Y: =322
             ZIndex: =7
 
-    Camera2 As camera:
-        Camera: =0
-        X: =120
-        Y: =722
+    Toggle1 As toggleSwitch:
+        FalseText: ="Add Photo"
+        Height: =33
+        OnCheck: =Set(TakePhoto, true)
+        OnUncheck: =Set(TakePhoto, false)
+        Size: =18
+        TextPosition: =TextPosition.Left
+        TrueText: ="Take Photo"
+        Width: =216
+        X: =388
+        Y: =261
         ZIndex: =8
+
+    Camera4 As camera:
+        Camera: =1
+        Height: =364
+        Width: =568
+        X: =36
+        Y: =322
+        ZIndex: =9
 

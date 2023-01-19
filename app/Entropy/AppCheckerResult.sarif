@@ -3584,19 +3584,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfirmDelivery2.Camera2.AccessibleLabel"
+                  "fullyQualifiedName": "ConfirmDelivery2.Toggle1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfirmDelivery2.Camera2.AccessibleLabel",
+                  "fullyQualifiedName": "ConfirmDelivery2.Toggle1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfirmDelivery2",
-                "type": "ConfirmDelivery2.Camera2"
+                "type": "ConfirmDelivery2.Toggle1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ConfirmDelivery2.Camera4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ConfirmDelivery2.Camera4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ConfirmDelivery2",
+                "type": "ConfirmDelivery2.Camera4"
               }
             }
           ],
