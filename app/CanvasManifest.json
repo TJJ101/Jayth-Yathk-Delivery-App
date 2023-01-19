@@ -95,14 +95,14 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "5dd01065-323b-4e3d-82dc-88bfff6719f7",
-    "Id": "1d6016c0-2633-4e44-9238-b42a0fb1db82",
+    "Id": "3f7e582c-61a5-49df-bdb0-01d8d18f618e",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Jayth Yathk Delivery App",
+    "Name": "JaY%25c3%25a4pp.msapp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "Jayth Yathk Delivery App",
+    "AppName": "JaYäpp",
     "BackgroundColor": "rgba(99, 139, 44, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "World",

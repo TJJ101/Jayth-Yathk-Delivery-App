@@ -1,4 +1,8 @@
 ConfirmDelivery2 As screen:
+    OnVisible: |-
+        =Set(TakePhoto, false);
+        Reset(Toggle1);
+        Set(PhotoTaken, false);
 
     Label19 As label:
         Align: =Align.Center
@@ -90,9 +94,30 @@ ConfirmDelivery2 As screen:
     Camera4 As camera:
         Camera: =1
         Height: =364
-        Visible: =If(TakePhoto = true, true, false)
+        Visible: =If(TakePhoto = true, If(PhotoTaken = true, false, true), false)
         Width: =568
         X: =36
         Y: =322
         ZIndex: =9
+
+    Label20 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Click on Image to take picture"
+        Visible: =If(TakePhoto = true, If(PhotoTaken = true, true, false), false)
+        Width: =564
+        X: =38
+        Y: =686
+        ZIndex: =10
+
+    Image5 As image:
+        Height: =364
+        Image: =Camera4.Photo
+        Visible: =If(TakePhoto = true, If(PhotoTaken = true, true, false), false)
+        Width: =560
+        X: =40
+        Y: =322
+        ZIndex: =11
 
