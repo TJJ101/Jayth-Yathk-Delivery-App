@@ -155,26 +155,46 @@ NewGrpDelivery As screen:
         Fill: =RGBA(54, 176, 75, 1)
         Height: =70
         OnSelect: |-
-            =ClearCollect(NewGrpDeliveryCol, {OrderId: Blank(), OrderStatusDateTime: Blank()});
-            Clear(NewGrpDeliveryCol);
-            ForAll(NewGrpDeliveryGallery1.AllItems, 
-                If(ThisRecord.Checkbox1.Value=true, Collect(NewGrpDeliveryCol, {OrderId: ThisRecord.OrderId, OrderStatusDateTime: ThisRecord.OrderStatusDateTime}))
+            =ClearCollect(
+                NewGrpDeliveryCol,
+                {
+                    OrderId: Blank(),
+                    OrderStatusDateTime: Blank()
+                }
             );
-            If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
-                Set(NewDeliveryId, RandBetween(First(deliverer).DelivererId, Last(deliverer).DelivererId));
-                Set(NewGrpDeliveryId, Max(Order, GroupDeliveryId)+1);
-                ForAll(NewGrpDeliveryCol, 
-                    Patch(Order, LookUp(Order, OrderId = ThisRecord.OrderId), 
+            Clear(NewGrpDeliveryCol);
+            ForAll(
+                NewGrpDeliveryGallery1.AllItems,
+                If(
+                    ThisRecord.Checkbox1.Value = true,
+                    Collect(
+                        NewGrpDeliveryCol,
                         {
-                            GroupDeliveryId:NewGrpDeliveryId,
-                            OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
-                            TrackingId:LookUp(Table10, Column1 = RandBetween(2, 8), GDTrackingId),
+                            OrderId: ThisRecord.OrderId,
+                            OrderStatusDateTime: ThisRecord.OrderStatusDateTime
+                        }
+                    )
+                )
+            );
+            If(
+                CountRows(NewGrpDeliveryCol) < 2,
+                Notify("Not enough orders selected", Warning, 1000),
+                Set(NewDeliveryId, RandBetween(First(deliverer).DelivererId, Last(deliverer).DelivererId));
+                Set(NewGrpDeliveryId, Max(Order, GroupDeliveryId) + 1);
+                Set(NewGDTrackingId, LookUp(Table10,Column1 = RandBetween(2,8),GDTrackingId));
+                ForAll(
+                    NewGrpDeliveryCol,
+                    Patch(Order,LookUp(Order,OrderId = ThisRecord.OrderId),
+                        {
+                            GroupDeliveryId: NewGrpDeliveryId,
+                            OrderStatusDateTime: DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
+                            TrackingId: NewGDTrackingId,
                             DelivererId: NewDeliveryId
                         }
                     )
                 );
                 Notify("Delivery Successfully Grouped", Success, 1000);
-                Back()
+                Navigate(CGrpDelivery, Fade);
             )
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
