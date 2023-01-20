@@ -161,12 +161,14 @@ NewGrpDelivery As screen:
                 If(ThisRecord.Checkbox1.Value=true, Collect(NewGrpDeliveryCol, {OrderId: ThisRecord.OrderId, OrderStatusDateTime: ThisRecord.OrderStatusDateTime}))
             );
             If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
+                Set(NewDeliveryId, RandBetween(First(deliverer).DelivererId, Last(deliverer).DelivererId));
                 ForAll(NewGrpDeliveryCol, 
                     Patch(Order, LookUp(Order, OrderId = ThisRecord.OrderId), 
                         {
                             GroupDeliveryId:Max(Order, GroupDeliveryId)+1,
                             OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
-                            TrackingId:LookUp(Table10, Column1 = RandBetween(2, 8), GDTrackingId)
+                            TrackingId:LookUp(Table10, Column1 = RandBetween(2, 8), GDTrackingId),
+                            DelivererId: NewDeliveryId
                         }
                     )
                 );

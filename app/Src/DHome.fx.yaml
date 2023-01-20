@@ -14,10 +14,10 @@ DHome As screen:
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         Height: =774
-        Items: =Filter(Filter(Order, DelivererId = CurrentDelivererId), OrderStatusState <> "Delivered")
+        Items: =Distinct(Filter(Filter(Order, DelivererId = CurrentDelivererId), OrderStatusState <> "Delivered"), TrackingId)
         Layout: =Layout.Vertical
         OnSelect: |-
-            =Set(SelectedOrderId, ThisItem.OrderId);
+            =Set(SelectedOrderId, LookUp(Order, And(TrackingId = ThisItem.Result, OrderStatusState <> "Delivered"),OrderId));
             Navigate(DDetails)
         TemplatePadding: =0
         TemplateSize: =149
@@ -32,7 +32,7 @@ DHome As screen:
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Package ID: " & ThisItem.TrackingId
+                ="Package ID: " & ThisItem.Result
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -47,7 +47,7 @@ DHome As screen:
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Addr: " & ThisItem.DeliveryAddress
+                ="Addr: " & LookUp(Order, And(TrackingId = ThisItem.Result, OrderStatusState <> "Delivered"), DeliveryAddress)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -62,7 +62,7 @@ DHome As screen:
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Comments: " & ThisItem.OrderStatusComments
+                ="Comments: " & LookUp(Order, And(TrackingId = ThisItem.Result, OrderStatusState <> "Delivered"), OrderStatusComments)
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
