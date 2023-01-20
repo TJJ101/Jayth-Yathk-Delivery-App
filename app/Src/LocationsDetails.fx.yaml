@@ -80,7 +80,7 @@ LocationsDetails As screen:
         Fill: =RGBA(54, 176, 75, 1)
         Height: =70
         OnSelect: |-
-            =Launch("http://maps.google.com/?q="&EncodeUrl(SelectedLocations))
+            =Launch("http://maps.google.com/?q="&EncodeUrl(LookUp(MachineLocationsCol, Locations = SelectedLocations, LocationName) & " " &  SelectedLocations))
         RadiusBottomLeft: =20
         RadiusBottomRight: =20
         RadiusTopLeft: =20
