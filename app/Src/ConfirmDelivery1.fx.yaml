@@ -260,7 +260,7 @@ ConfirmDelivery1 As screen:
                 Set(SelectedOrderId, LookUp(Order, TrackingId = ScannedValue, OrderId));
                 Navigate(ConfirmDelivery2, CoverRight)
                 ,
-                Notify("Delivery " & ScannedValue & " doesn't exist or is not assigned to you or has already been delivered", Warning, 1000)
+                Notify("Delivery " & ScannedValue & " doesn't exist or is not assigned to you or has already been delivered", Warning, 2000)
             )
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
