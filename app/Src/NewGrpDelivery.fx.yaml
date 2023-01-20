@@ -158,7 +158,7 @@ NewGrpDelivery As screen:
             =ClearCollect(
                 NewGrpDeliveryCol,
                 {
-                    OrderId: Blank(),
+                    OrderId2: Blank(),
                     OrderStatusDateTime: Blank()
                 }
             );
@@ -170,7 +170,7 @@ NewGrpDelivery As screen:
                     Collect(
                         NewGrpDeliveryCol,
                         {
-                            OrderId: ThisRecord.OrderId,
+                            OrderId2: ThisRecord.OrderId,
                             OrderStatusDateTime: ThisRecord.OrderStatusDateTime
                         }
                     )
@@ -184,7 +184,7 @@ NewGrpDelivery As screen:
                 Set(NewGDTrackingId, LookUp(Table10,Column1 = RandBetween(2,8),GDTrackingId));
                 ForAll(
                     NewGrpDeliveryCol,
-                    Patch(Order,LookUp(Order,OrderId = ThisRecord.OrderId),
+                    Patch(Order,LookUp(Order, OrderId = OrderId2),
                         {
                             GroupDeliveryId: NewGrpDeliveryId,
                             OrderStatusDateTime: DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
