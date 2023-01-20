@@ -1,0 +1,94 @@
+LocationsDetails As screen:
+
+    Group2_2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =20
+        ZIndex: =3
+
+        Rectangle2_17 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            Fill: =RGBA(56, 89, 12, 1)
+            Height: =126
+            Width: =640
+            ZIndex: =1
+
+        AppTxt2_17 As label:
+            Align: =Align.Center
+            Color: =RGBA(127, 178, 57, 1)
+            Font: =Font.Georgia
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =40
+            Text: ="JaYäpp"
+            Width: =560
+            X: =40
+            Y: =28
+            ZIndex: =2
+
+        BackArrow1_8 As icon.BackArrow:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =55
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCover)
+            Width: =55
+            X: =24
+            Y: =35
+            ZIndex: =4
+
+    Image12 As image:
+        Height: =450
+        Image: |-
+            =If(SelectedLocations = "1 Punggol Dr., Singapore 828629", 'One Punggol',
+                If(SelectedLocations = "259C Punggol Field, Singapore 823259", 'Punggol West Community Centre',
+                    If(SelectedLocations = "Punggol 21 cc", 'Punggol Community club 2',
+                        If(SelectedLocations = "3 Hougang Ave 6, Singapore 538808", 'Punggol Community Club',
+                            If(SelectedLocations = "209B Punggol Pl, Singapore 821209", 'Punggol West Activity Centre')
+                        )
+                    )
+                )
+            )
+        Width: =450
+        X: =95
+        Y: =160
+        ZIndex: =5
+
+    Label25 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =LookUp(MachineLocationsCol, Locations = SelectedLocations, LocationName)
+        Width: =560
+        X: =40
+        Y: =610
+        ZIndex: =6
+
+    Label26 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Addr: " & LookUp(MachineLocationsCol, Locations = SelectedLocations, Locations)
+        Width: =560
+        X: =40
+        Y: =693
+        ZIndex: =7
+
+    Button5 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =70
+        OnSelect: |-
+            =Launch("http://maps.google.com/?q="&EncodeUrl(SelectedLocations))
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="Open GMaps"
+        Width: =280
+        X: =180
+        Y: =946
+        ZIndex: =8
+

@@ -69,6 +69,9 @@ MachineLocations As screen:
         Height: =524
         Items: =MachineLocationsCol
         Layout: =Layout.Vertical
+        OnSelect: |-
+            =Set(SelectedLocations, ThisItem.Locations);
+            Navigate(LocationsDetails, Fade)
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
         Y: =612
