@@ -21,7 +21,7 @@ CGrpDeliveryDetails As screen:
         Image: =If(LookUp(Order, GroupDeliveryId = SelectedGrpDId, OrderStatusState) = "Delivering parcel", 'Package On the Way',SampleImage)
         Width: =320
         X: =160
-        Y: =255
+        Y: =213
         ZIndex: =9
 
     HeaderHud2_1 As group:
@@ -68,7 +68,7 @@ CGrpDeliveryDetails As screen:
             ="Estimated Arrival: " & Text(LookUp(Order, GroupDeliveryId = SelectedGrpDId, OrderStatusDateTime), "dd/mmm/yyyy")
         Width: =560
         X: =40
-        Y: =614
+        Y: =637
         ZIndex: =10
 
     Label16 As label:
@@ -79,7 +79,7 @@ CGrpDeliveryDetails As screen:
             ="Addr: " & LookUp(Order, GroupDeliveryId = SelectedGrpDId,DeliveryAddress)
         Width: =560
         X: =40
-        Y: =687
+        Y: =710
         ZIndex: =11
 
     Label16_1 As label:
@@ -90,6 +90,18 @@ CGrpDeliveryDetails As screen:
             ="Total Cost: $" & Sum(Filter(Order, GroupDeliveryId = SelectedGrpDId), OrderPrice)
         Width: =560
         X: =40
-        Y: =757
+        Y: =780
         ZIndex: =12
+
+    Label4_6 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =73
+        Size: =21
+        Text: |-
+            ="Tracking ID: " & LookUp(Order, GroupDeliveryId = SelectedGrpDId, TrackingId)
+        Width: =560
+        X: =40
+        Y: =564
+        ZIndex: =13
 
