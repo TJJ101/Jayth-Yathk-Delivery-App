@@ -62,17 +62,6 @@ ItemDetails As screen:
         Y: =621
         ZIndex: =9
 
-    Label18_1 As label:
-        Height: =70
-        PaddingLeft: =10
-        Size: =21
-        Text: |-
-            ="Cost: $" &  LookUp(Order, OrderId = SelectedOrderId, OrderPrice)
-        Width: =560
-        X: =40
-        Y: =775
-        ZIndex: =10
-
     Label18_2 As label:
         FontWeight: =FontWeight.Semibold
         Height: =70
