@@ -81,7 +81,7 @@ DDetails As screen:
         ZIndex: =7
 
     Label13 As label:
-        Height: =70
+        Height: =83
         Size: =25
         Text: |-
             ="Status: " & LookUp(Order, OrderId = SelectedOrderId, OrderStatusState)

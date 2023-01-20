@@ -162,10 +162,11 @@ NewGrpDelivery As screen:
             );
             If(CountRows(NewGrpDeliveryCol) < 2, Notify("Not enough orders selected", Warning, 1000), 
                 Set(NewDeliveryId, RandBetween(First(deliverer).DelivererId, Last(deliverer).DelivererId));
+                Set(NewGrpDeliveryId, Max(Order, GroupDeliveryId)+1);
                 ForAll(NewGrpDeliveryCol, 
                     Patch(Order, LookUp(Order, OrderId = ThisRecord.OrderId), 
                         {
-                            GroupDeliveryId:Max(Order, GroupDeliveryId)+1,
+                            GroupDeliveryId:NewGrpDeliveryId,
                             OrderStatusDateTime:DateValue(First(Sort(NewGrpDeliveryCol,OrderStatusDateTime,Descending)).OrderStatusDateTime),
                             TrackingId:LookUp(Table10, Column1 = RandBetween(2, 8), GDTrackingId),
                             DelivererId: NewDeliveryId
