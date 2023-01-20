@@ -124,7 +124,7 @@ DHome As screen:
             Color: =RGBA(214, 223, 238, 1)
             Icon: =Icon.Hamburger
             OnSelect: =Set(HamburgVisible, true)
-            X: =17
+            X: =18
             Y: =31
             ZIndex: =10
 

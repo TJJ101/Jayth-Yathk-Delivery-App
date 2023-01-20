@@ -254,49 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.AccessibleLabel"
+                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CGrpDelivery",
-                "type": "CGrpDelivery.HamburgBackBtn1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.TabIndex",
+                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CGrpDelivery",
-                "type": "CGrpDelivery.HamburgBackBtn1_5"
+                "type": "CGrpDelivery.LogoutBtn1_5"
               }
             }
           ],
@@ -308,6 +278,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CGrpDelivery",
+                "type": "CGrpDelivery.LogoutBtn1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -434,49 +434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.AccessibleLabel"
+                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CGrpDelivery",
-                "type": "CGrpDelivery.LogoutBtn1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CGrpDelivery.LogoutBtn1_5.TabIndex",
+                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CGrpDelivery",
-                "type": "CGrpDelivery.LogoutBtn1_5"
+                "type": "CGrpDelivery.HamburgBackBtn1_5"
               }
             }
           ],
@@ -488,6 +458,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CGrpDelivery.HamburgBackBtn1_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CGrpDelivery",
+                "type": "CGrpDelivery.HamburgBackBtn1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1184,36 +1184,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CRewards.HamburgBackBtn1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CRewards.HamburgBackBtn1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CRewards",
-                "type": "CRewards.HamburgBackBtn1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "CRewards.HamburgBackBtn1_1.TabIndex"
                 }
               ],
@@ -1238,6 +1208,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CRewards.HamburgBackBtn1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CRewards.HamburgBackBtn1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CRewards",
+                "type": "CRewards.HamburgBackBtn1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1454,49 +1454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CRewards.Icon2_11.AccessibleLabel"
+                  "fullyQualifiedName": "CRewards.LogoutBtn1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CRewards.Icon2_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CRewards",
-                "type": "CRewards.Icon2_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CRewards.Icon2_11.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CRewards.Icon2_11.TabIndex",
+                  "fullyQualifiedName": "CRewards.LogoutBtn1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CRewards",
-                "type": "CRewards.Icon2_11"
+                "type": "CRewards.LogoutBtn1_1"
               }
             }
           ],
@@ -1538,36 +1508,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CRewards.LogoutBtn1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CRewards.LogoutBtn1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "CRewards",
-                "type": "CRewards.LogoutBtn1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -3254,49 +3194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.AccessibleLabel"
+                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CHistory",
-                "type": "CHistory.HamburgBackBtn1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.TabIndex",
+                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CHistory",
-                "type": "CHistory.HamburgBackBtn1_2"
+                "type": "CHistory.LogoutBtn1_2"
               }
             }
           ],
@@ -3308,6 +3218,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CHistory",
+                "type": "CHistory.LogoutBtn1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -3584,49 +3524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.AccessibleLabel"
+                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CHistory",
-                "type": "CHistory.LogoutBtn1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CHistory.LogoutBtn1_2.TabIndex",
+                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CHistory",
-                "type": "CHistory.LogoutBtn1_2"
+                "type": "CHistory.HamburgBackBtn1_2"
               }
             }
           ],
@@ -3638,6 +3548,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CHistory.HamburgBackBtn1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CHistory",
+                "type": "CHistory.HamburgBackBtn1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [

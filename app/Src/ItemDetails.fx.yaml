@@ -1,4 +1,5 @@
 ItemDetails As screen:
+    OnVisible: =Set(HamburgVisible, false)
 
     Rectangle2_3 As rectangle:
         BorderColor: =RGBA(152, 208, 70, 1)

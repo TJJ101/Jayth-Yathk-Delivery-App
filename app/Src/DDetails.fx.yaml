@@ -1,4 +1,5 @@
 DDetails As screen:
+    OnVisible: =Set(HamburgVisible, false)
 
     MapImage1 As image:
         Height: =350

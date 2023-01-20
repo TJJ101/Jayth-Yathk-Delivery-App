@@ -1,4 +1,5 @@
 RewardDetails As screen:
+    OnVisible: =Set(HamburgVisible, false)
 
     FormViewer1 As formViewer:
         DataSource: =Reward

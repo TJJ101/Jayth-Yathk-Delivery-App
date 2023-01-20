@@ -3,6 +3,7 @@ ConfirmDelivery2 As screen:
         =Set(TakePhoto, false);
         Reset(Toggle1);
         Set(PhotoTaken, false);
+        Set(HamburgVisible, false)
 
     Label19 As label:
         Align: =Align.Center

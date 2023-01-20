@@ -1,4 +1,5 @@
 Accounts As screen:
+    OnVisible: =Set(HamburgVisible, false)
 
     Icon4 As icon.Person:
         Color: =RGBA(0, 0, 0, 1)

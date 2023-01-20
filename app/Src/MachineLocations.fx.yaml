@@ -6,7 +6,8 @@ MachineLocations As screen:
             {LocationName: "Punggol Community Club", Locations: "3 Hougang Ave 6, Singapore 538808"},
             {LocationName: "One Punggol", Locations: "1 Punggol Dr., Singapore 828629"},
             {LocationName: "Punggol West Activity Centre", Locations: "209B Punggol Pl, Singapore 821209"}
-        )
+        );
+        Set(HamburgVisible, false)
 
     Label24 As label:
         Align: =Align.Center

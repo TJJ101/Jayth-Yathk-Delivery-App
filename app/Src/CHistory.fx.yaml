@@ -311,12 +311,28 @@ CHistory As screen:
             Y: =31
             ZIndex: =9
 
+    OwnToggle1_1 As toggleSwitch:
+        FalseFill: =RGBA(187, 221, 140, 1)
+        FalseText: =
+        Font: =Font.Georgia
+        Height: =32
+        OnCheck: =Set(HistoryChoice, "Rewards")
+        OnUncheck: =Set(HistoryChoice, "Delivery")
+        Size: =18
+        TextPosition: =TextPosition.Left
+        TrueFill: =RGBA(99, 139, 44, 1)
+        TrueText: =
+        Width: =80
+        X: =536
+        Y: =237
+        ZIndex: =19
+
     HamburgerPopup1_2 As group:
         Height: =5
         Width: =5
         X: =20
-        Y: =40
-        ZIndex: =18
+        Y: =60
+        ZIndex: =31
 
         HamburgPopupBack1_2 As rectangle:
             BorderColor: =RGBA(232, 244, 217, 1)
@@ -325,7 +341,7 @@ CHistory As screen:
             OnSelect: =
             Visible: =HamburgVisible
             Width: =308
-            ZIndex: =11
+            ZIndex: =20
 
         HamburgBackBtn1_2 As arrow.backArrow:
             BorderThickness: =2
@@ -336,7 +352,7 @@ CHistory As screen:
             Width: =55
             X: =18
             Y: =26
-            ZIndex: =12
+            ZIndex: =21
 
         LogoutBtn1_2 As icon.Leave:
             Color: =RGBA(0, 0, 0, 1)
@@ -349,7 +365,7 @@ CHistory As screen:
             Width: =55
             X: =18
             Y: =1058
-            ZIndex: =13
+            ZIndex: =22
 
         ToAccBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -367,7 +383,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =14
+            ZIndex: =23
 
         Icon2_12 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -378,7 +394,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =196
-            ZIndex: =15
+            ZIndex: =24
 
         Icon2_13 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -389,7 +405,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =126
-            ZIndex: =16
+            ZIndex: =25
 
         ToRewardsBtn1_2 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -407,7 +423,7 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =199
-            ZIndex: =17
+            ZIndex: =26
 
         Icon2_14 As icon.HorizontalLine:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -418,21 +434,43 @@ CHistory As screen:
             Visible: =HamburgVisible
             Width: =308
             Y: =269
-            ZIndex: =18
+            ZIndex: =27
 
-    OwnToggle1_1 As toggleSwitch:
-        FalseFill: =RGBA(187, 221, 140, 1)
-        FalseText: =
-        Font: =Font.Georgia
-        Height: =32
-        OnCheck: =Set(HistoryChoice, "Rewards")
-        OnUncheck: =Set(HistoryChoice, "Delivery")
-        Size: =18
-        TextPosition: =TextPosition.Left
-        TrueFill: =RGBA(99, 139, 44, 1)
-        TrueText: =
-        Width: =80
-        X: =536
-        Y: =237
-        ZIndex: =19
+        ToMachineLocation_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(232, 244, 217, 1)
+            Font: =Font.Georgia
+            Height: =70
+            HoverColor: =RGBA(0, 0, 0, 100)
+            HoverFill: =RGBA(209, 232, 178, 100)
+            OnSelect: |-
+                =Navigate(MachineLocations, ScreenTransition.Fade);
+                Set(HamburgVisible, false);
+            Size: =20
+            Text: ="Locations"
+            Visible: =HamburgVisible
+            Width: =308
+            Y: =271
+            ZIndex: =28
+
+        Icon6_7 As icon.HorizontalLine:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Visible: =HamburgVisible
+            Width: =308
+            Y: =341
+            ZIndex: =29
+
+        Icon6_6 As icon.HorizontalLine:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Height: =0
+            Icon: =Icon.HorizontalLine
+            Visible: =HamburgVisible
+            Width: =308
+            Y: =269
+            ZIndex: =30
 

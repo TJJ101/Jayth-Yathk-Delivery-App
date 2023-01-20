@@ -1,4 +1,5 @@
 CGrpDeliveryDetails As screen:
+    OnVisible: =Set(HamburgVisible, false)
 
     Label4_4 As label:
         Align: =Align.Center
